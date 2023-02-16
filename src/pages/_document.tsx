@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -11,8 +13,10 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body>
+      <body className="bg-slate-dark-1">
+        <Header />
         <Main />
+        <Footer />
         <NextScript />
       </body>
     </Html>

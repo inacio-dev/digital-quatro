@@ -1,4 +1,3 @@
-
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
@@ -11,11 +10,11 @@ module.exports = {
       },
       colors: {
         brand: {
-          yellow: '#BCE784',
-          orange: '#5DD39E',
-          red: '#348AA7',
-          blue: '#525174',
-          purple: '#513B56'
+          yellow: '#FFBA08',
+          orange: '#F26419',
+          red: '#D00000',
+          blue: '#032B43',
+          purple: '#2D1E2F'
         },
         slate: {
           light: {
