@@ -10,7 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="m-1 flex items-center justify-center p-3">
-        This site will be created at last.
+        <p className="text-2xl font-bold">This site will be created at last.</p>
       </main>
     </>
   )
