@@ -1,6 +1,9 @@
+import useWindowDimensions from '@/hooks/get-windowDimension'
 import Head from 'next/head'
 
 export default function Home() {
+  const { width, height } = useWindowDimensions()
+
   return (
     <>
       <Head>
@@ -9,8 +12,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex h-full w-full items-center justify-center bg-white">
-        <p className="text-2xl font-bold">This site will be created at last.</p>
+      <main className="flex w-full items-center justify-center bg-white">
+        <div className={`min-h-[${height}px] text-2xl font-bold`}>{height}</div>
       </main>
     </>
   )
