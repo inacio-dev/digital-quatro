@@ -1,8 +1,19 @@
 import useWindowDimensions from '@/hooks/get-windowDimension'
+import ArrowDown from '@/Icons/ArrowDown'
+import EllipseCircle from '@/Icons/EllipseCircle'
+import Square from '@/Icons/Square'
 import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   const { width, height } = useWindowDimensions()
+
+  const styling = {
+    backgroundImage: `url('/ellipse-trafego-index.svg')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: '40%'
+  }
 
   return (
     <>
@@ -12,8 +23,78 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex w-full items-center justify-center bg-white">
-        <div className={`min-h-[${height}px] text-2xl font-bold`}>{height}</div>
+      <main className="flex w-full flex-col items-center justify-center">
+        <div className="w-full flex-col text-slate-light-1">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="absolute top-[20%] left-[10%] text-8xl font-bold tracking-[.2em]">
+              TRÁFEGO
+            </h1>
+
+            <div className="absolute top-[60%] left-[14%] flex max-w-[162px] items-center space-x-3">
+              <Square className="h-2 w-2 fill-slate-light-1" />
+              <p>INCREMENTE O DESIGN DA SUA EMPRESA</p>
+            </div>
+
+            <div className="scale-125">
+              <Image
+                style={styling}
+                src="/trafego-index.png"
+                width={height ? height * 1.1 : 0}
+                alt={''}
+                height={0}
+              />
+            </div>
+
+            <div className="absolute right-[15%] max-w-sm">
+              <h1 className="text-2xl font-medium">
+                DESEJA INICIAR O TRÁFEGO PAGO NA SUA EMPRESA?
+              </h1>
+              <p className="pt-4">
+                Potencialize suas vendas e conquiste novos clientes com a poderosa combinação do
+                Google Ads e Meta Ads.
+              </p>
+
+              <div className="space-x-5 pt-9">
+                <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+                <button className="py-2 px-5">SAIBA MAIS</button>
+              </div>
+            </div>
+          </div>
+          <div className="flex h-52 w-full items-center justify-between bg-[#0B0B0B] px-[20%] text-xl tracking-[.1em] drop-shadow-upper">
+            <div>
+              <p>CLIENTES</p>
+              <p className="font-bold">SATISFEITOS</p>
+            </div>
+            <div>
+              <p>CERTIFICADOS</p>
+              <p className="font-bold">PELO GOOGLE</p>
+            </div>
+            <div>
+              <p>CONSULTORIA</p>
+              <p className="font-bold">GRATUITA</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex w-full flex-col items-center justify-center py-[34vh] text-slate-light-1">
+          <div className="flex flex-col items-center text-7xl tracking-[.2em]">
+            <p className="font-semibold">ELEVE SUA</p>
+            <p className="font-light">EMPRESA</p>
+            <p className="font-semibold">A OUTRO PATAMAR</p>
+          </div>
+          <EllipseCircle className="absolute -z-10" />
+
+          <div className="absolute left-0 flex rotate-90 items-center space-x-3 pr-[30%] pt-[25%]">
+            <Square className="h-2 w-2 fill-slate-light-1" />
+            <p>COMECE IMEDIATAMENTE</p>
+          </div>
+          <div className="absolute right-0 flex -rotate-90 items-center space-x-3 pl-[30%] pt-[25%]">
+            <Square className="h-2 w-2 fill-slate-light-1" />
+            <p>COMECE IMEDIATAMENTE</p>
+          </div>
+
+          <ArrowDown className="absolute w-6 fill-slate-light-1 pt-[35%]" />
+        </div>
       </main>
     </>
   )
