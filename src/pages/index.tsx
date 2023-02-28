@@ -1,6 +1,8 @@
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import ArrowDown from '@/Icons/ArrowDown'
 import EllipseCircle from '@/Icons/EllipseCircle'
+import EllipseCircleMiddle from '@/Icons/EllipseCircleMiddle'
+import LogoShort from '@/Icons/LogoShort'
 import Square from '@/Icons/Square'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -13,6 +15,13 @@ export default function Home() {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: '40%'
+  }
+
+  const styling2 = {
+    backgroundImage: `url('/ellipse.svg')`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: '100%'
   }
 
   return (
@@ -94,6 +103,76 @@ export default function Home() {
           </div>
 
           <ArrowDown className="absolute w-6 fill-slate-light-1 pt-[35%]" />
+        </div>
+
+        <div className="flex w-full items-center justify-between px-[18%] py-[19vh] text-slate-light-1">
+          <EllipseCircleMiddle className="absolute left-0 -z-10 object-cover" />
+          <EllipseCircleMiddle className="absolute right-0 -z-10 rotate-180" />
+
+          <div>
+            <div className="flex items-center justify-center">
+              <LogoShort />
+              <h1 className="flex text-6xl font-semibold tracking-widest">
+                Sobre <h1 className="pl-3 font-light text-brand-yellow">a Digital</h1>
+              </h1>
+            </div>
+            <div className="space-y-8 pl-[20%]">
+              <p className="max-w-md">
+                Ei, que bom que você chegou à nossa agência de marketing digital! Nós somos as
+                pessoas que podem ajudar sua empresa a crescer online. Com uma pitada de
+                criatividade e muita experiência, criamos estratégias de marketing digital que se
+                encaixam perfeitamente nas necessidades de cada cliente. Se você precisa de um site
+                incrível, campanhas publicitárias matadoras ou uma presença impecável nas redes
+                sociais, estamos aqui para ajudar. Vamos trabalhar juntos para levar o seu negócio
+                para o próximo nível! Entre em contato com a gente agora e vamos conversar!
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex max-w-[198px] items-center space-x-3">
+                  <Square className="h-2 w-2 fill-brand-yellow" />
+                  <p className="text-sm font-bold">PROFISSIONAIS QUALIFICADOS</p>
+                </div>
+                <div className="flex max-w-[198px] items-center space-x-3">
+                  <Square className="h-2 w-2 fill-brand-yellow" />
+                  <p className="text-sm font-bold">SUPORTE</p>
+                </div>
+                <div className="flex max-w-[198px] items-center space-x-3">
+                  <Square className="h-2 w-2 fill-brand-yellow" />
+                  <p className="text-sm font-bold">PROGRAMADORES</p>
+                </div>
+                <div className="flex max-w-[198px] items-center space-x-3">
+                  <Square className="h-2 w-2 fill-brand-yellow" />
+                  <p className="text-sm font-bold">DESIGNERS</p>
+                </div>
+              </div>
+              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+            </div>
+          </div>
+
+          <Image
+            style={styling2}
+            src="/group-index.png"
+            width={height ? height * 0.3 : 0}
+            alt={''}
+            height={0}
+          />
+        </div>
+
+        <div className="flex items-center justify-between px-[10%]">
+          <Image src="/contact.png" width={width ? width * 0.6 : 0} alt={''} height={0} />
+          <div className="tracking-widest text-slate-light-1">
+            <h1 className="text-6xl font-bold ">CONTATE-NOS</h1>
+            <h3 className="text-4xl text-brand-yellow">FALE CONOSCO E TIRE SUAS DÚVIDAS</h3>
+            <p>
+              Escolha o método de sua preferência abaixo e entraremos em contato o mais breve
+              possível.
+            </p>
+            <div className="flex flex-col gap-3 tracking-normal">
+              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+            </div>
+          </div>
         </div>
       </main>
     </>
