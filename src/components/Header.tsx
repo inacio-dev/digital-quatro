@@ -1,5 +1,4 @@
 import Logo from '@/Icons/Logo'
-import Anchor from './Anchor'
 
 export default function Header() {
   return (

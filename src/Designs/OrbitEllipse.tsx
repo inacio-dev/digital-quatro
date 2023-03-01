@@ -2,7 +2,7 @@ import React from 'react'
 
 type SvgProps = React.ComponentPropsWithoutRef<'svg'>
 
-export default function EllipseCircle(props: SvgProps) {
+export default function OrbitEllipse(props: SvgProps) {
   return (
     <svg
       {...props}

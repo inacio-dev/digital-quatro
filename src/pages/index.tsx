@@ -1,28 +1,13 @@
+import About from '@/components/About'
+import Banners from '@/components/Banners'
+import Contact from '@/components/Contact'
+import Raise from '@/components/Raise'
 import useWindowDimensions from '@/hooks/get-windowDimension'
-import ArrowDown from '@/Icons/ArrowDown'
-import EllipseCircle from '@/Icons/EllipseCircle'
-import EllipseCircleMiddle from '@/Icons/EllipseCircleMiddle'
-import LogoShort from '@/Icons/LogoShort'
-import Square from '@/Icons/Square'
 import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Home() {
   const { width, height } = useWindowDimensions()
-
-  const styling = {
-    backgroundImage: `url('/ellipse-trafego-index.svg')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: '40%'
-  }
-
-  const styling2 = {
-    backgroundImage: `url('/ellipse.svg')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: '100%'
-  }
 
   return (
     <>
@@ -33,147 +18,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <div className="w-full flex-col text-slate-light-1">
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="absolute top-[20%] left-[10%] text-8xl font-bold tracking-[.2em]">
-              TRÁFEGO
-            </h1>
-
-            <div className="absolute top-[60%] left-[14%] flex max-w-[162px] items-center space-x-3">
-              <Square className="h-2 w-2 fill-slate-light-1" />
-              <p>INCREMENTE O DESIGN DA SUA EMPRESA</p>
-            </div>
-
-            <div className="scale-125">
-              <Image
-                style={styling}
-                src="/trafego-index.png"
-                width={height ? height * 1.1 : 0}
-                alt={''}
-                height={0}
-              />
-            </div>
-
-            <div className="absolute right-[15%] max-w-sm">
-              <h1 className="text-2xl font-medium">
-                DESEJA INICIAR O TRÁFEGO PAGO NA SUA EMPRESA?
-              </h1>
-              <p className="pt-4">
-                Potencialize suas vendas e conquiste novos clientes com a poderosa combinação do
-                Google Ads e Meta Ads.
-              </p>
-
-              <div className="space-x-5 pt-9">
-                <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-                <button className="py-2 px-5">SAIBA MAIS</button>
-              </div>
-            </div>
-          </div>
-          <div className="flex h-52 w-full items-center justify-between bg-[#0B0B0B] px-[20%] text-xl tracking-[.1em] drop-shadow-upper">
-            <div>
-              <p>CLIENTES</p>
-              <p className="font-bold">SATISFEITOS</p>
-            </div>
-            <div>
-              <p>CERTIFICADOS</p>
-              <p className="font-bold">PELO GOOGLE</p>
-            </div>
-            <div>
-              <p>CONSULTORIA</p>
-              <p className="font-bold">GRATUITA</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex w-full flex-col items-center justify-center py-[34vh] text-slate-light-1">
-          <div className="flex flex-col items-center text-7xl tracking-[.2em]">
-            <p className="font-semibold">ELEVE SUA</p>
-            <p className="font-light">EMPRESA</p>
-            <p className="font-semibold">A OUTRO PATAMAR</p>
-          </div>
-          <EllipseCircle className="absolute -z-10" />
-
-          <div className="absolute left-0 flex rotate-90 items-center space-x-3 pr-[30%] pt-[25%]">
-            <Square className="h-2 w-2 fill-slate-light-1" />
-            <p>COMECE IMEDIATAMENTE</p>
-          </div>
-          <div className="absolute right-0 flex -rotate-90 items-center space-x-3 pl-[30%] pt-[25%]">
-            <Square className="h-2 w-2 fill-slate-light-1" />
-            <p>COMECE IMEDIATAMENTE</p>
-          </div>
-
-          <ArrowDown className="absolute w-6 fill-slate-light-1 pt-[35%]" />
-        </div>
-
-        <div className="flex w-full items-center justify-between px-[18%] py-[19vh] text-slate-light-1">
-          <EllipseCircleMiddle className="absolute left-0 -z-10 object-cover" />
-          <EllipseCircleMiddle className="absolute right-0 -z-10 rotate-180" />
-
-          <div>
-            <div className="flex items-center justify-center">
-              <LogoShort />
-              <h1 className="flex text-6xl font-semibold tracking-widest">
-                Sobre <h1 className="pl-3 font-light text-brand-yellow">a Digital</h1>
-              </h1>
-            </div>
-            <div className="space-y-8 pl-[20%]">
-              <p className="max-w-md">
-                Ei, que bom que você chegou à nossa agência de marketing digital! Nós somos as
-                pessoas que podem ajudar sua empresa a crescer online. Com uma pitada de
-                criatividade e muita experiência, criamos estratégias de marketing digital que se
-                encaixam perfeitamente nas necessidades de cada cliente. Se você precisa de um site
-                incrível, campanhas publicitárias matadoras ou uma presença impecável nas redes
-                sociais, estamos aqui para ajudar. Vamos trabalhar juntos para levar o seu negócio
-                para o próximo nível! Entre em contato com a gente agora e vamos conversar!
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex max-w-[198px] items-center space-x-3">
-                  <Square className="h-2 w-2 fill-brand-yellow" />
-                  <p className="text-sm font-bold">PROFISSIONAIS QUALIFICADOS</p>
-                </div>
-                <div className="flex max-w-[198px] items-center space-x-3">
-                  <Square className="h-2 w-2 fill-brand-yellow" />
-                  <p className="text-sm font-bold">SUPORTE</p>
-                </div>
-                <div className="flex max-w-[198px] items-center space-x-3">
-                  <Square className="h-2 w-2 fill-brand-yellow" />
-                  <p className="text-sm font-bold">PROGRAMADORES</p>
-                </div>
-                <div className="flex max-w-[198px] items-center space-x-3">
-                  <Square className="h-2 w-2 fill-brand-yellow" />
-                  <p className="text-sm font-bold">DESIGNERS</p>
-                </div>
-              </div>
-              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-            </div>
-          </div>
-
-          <Image
-            style={styling2}
-            src="/group-index.png"
-            width={height ? height * 0.3 : 0}
-            alt={''}
-            height={0}
-          />
-        </div>
-
-        <div className="flex items-center justify-between px-[10%]">
-          <Image src="/contact.png" width={width ? width * 0.6 : 0} alt={''} height={0} />
-          <div className="tracking-widest text-slate-light-1">
-            <h1 className="text-6xl font-bold ">CONTATE-NOS</h1>
-            <h3 className="text-4xl text-brand-yellow">FALE CONOSCO E TIRE SUAS DÚVIDAS</h3>
-            <p>
-              Escolha o método de sua preferência abaixo e entraremos em contato o mais breve
-              possível.
-            </p>
-            <div className="flex flex-col gap-3 tracking-normal">
-              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-              <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-            </div>
-          </div>
-        </div>
+        <Banners />
+        <Raise />
+        <About />
+        <Contact />
       </main>
     </>
   )
