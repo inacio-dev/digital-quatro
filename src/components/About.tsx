@@ -62,9 +62,10 @@ export default function About() {
       <Image
         style={styling}
         src="/desktop.png"
-        width={height ? height * 0.3 : 0}
+        width={height ? height * 0.4 : 0}
         alt={''}
         height={0}
+        quality={100}
       />
     </div>
   )

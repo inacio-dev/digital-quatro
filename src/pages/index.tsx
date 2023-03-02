@@ -2,9 +2,9 @@ import About from '@/components/About'
 import Banners from '@/components/Banners'
 import Contact from '@/components/Contact'
 import Raise from '@/components/Raise'
+import Services from '@/components/Services'
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import Head from 'next/head'
-import Image from 'next/image'
 
 export default function Home() {
   const { width, height } = useWindowDimensions()
@@ -20,6 +20,7 @@ export default function Home() {
       <main className="flex w-full flex-col items-center justify-center">
         <Banners />
         <Raise />
+        <Services />
         <About />
         <Contact />
       </main>

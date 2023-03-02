@@ -29,21 +29,21 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col gap-3 space-y-3 fill-slate-light-1 tracking-normal">
-          <button className="flex items-center justify-center gap-3 bg-brand-yellow py-2 px-10">
-            <Whatsapp className="sticky left-0 w-9" />
-            WHATSAPP
+          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
+            <Whatsapp className="w-9" />
+            <span className="flex-1">WHATSAPP</span>
           </button>
-          <button className="flex items-center justify-center gap-3 bg-brand-yellow py-2 px-10">
-            <Email className="w-9" />
-            EMAIL
+          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
+            <Email className="w-8" />
+            <span className="flex-1">EMAIL</span>
           </button>
-          <button className="flex items-center justify-center gap-3 bg-brand-yellow py-2 px-10">
-            <Messenger className="w-9" />
-            MESSENGER
+          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
+            <Messenger className="w-8" />
+            <span className="flex-1">MESSENGER</span>
           </button>
-          <button className="flex items-center justify-center gap-3 bg-brand-yellow py-2 px-10">
-            <Instagram className="w-9" />
-            INSTAGRAM
+          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
+            <Instagram className="w-8" />
+            <span className="flex-1">INSTAGRAM</span>
           </button>
         </div>
       </div>
