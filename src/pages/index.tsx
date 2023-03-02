@@ -3,12 +3,9 @@ import Banners from '@/components/Banners'
 import Contact from '@/components/Contact'
 import Raise from '@/components/Raise'
 import Services from '@/components/Services'
-import useWindowDimensions from '@/hooks/get-windowDimension'
 import Head from 'next/head'
 
 export default function Home() {
-  const { width, height } = useWindowDimensions()
-
   return (
     <>
       <Head>

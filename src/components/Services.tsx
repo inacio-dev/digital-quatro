@@ -15,7 +15,7 @@ export default function Services() {
           <div className="flex flex-col items-center justify-center space-y-10">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-3xl tracking-wide">SITE</h1>
-              <hr className="h-[3px] w-[3vw] rounded border-0 bg-brand-yellow"></hr>
+              <hr className="h-[3px] w-[5vw] rounded border-0 bg-brand-yellow"></hr>
             </div>
 
             <p className="max-w-[220px] text-center">
@@ -34,7 +34,7 @@ export default function Services() {
           <div className="flex flex-col items-center justify-center space-y-10">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-3xl tracking-wide">DESIGN GRÁFICO</h1>
-              <hr className="h-[3px] w-[3vw] rounded border-0 bg-brand-yellow"></hr>
+              <hr className="h-[3px] w-[5vw] rounded border-0 bg-brand-yellow"></hr>
             </div>
 
             <p className="max-w-[220px] text-center">
@@ -53,7 +53,7 @@ export default function Services() {
           <div className="flex flex-col items-center justify-center space-y-10">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-3xl tracking-wide">TRÁFEGO PAGO</h1>
-              <hr className="h-[3px] w-[3vw] rounded border-0 bg-brand-yellow"></hr>
+              <hr className="h-[3px] w-[5vw] rounded border-0 bg-brand-yellow"></hr>
             </div>
 
             <p className="max-w-[220px] text-center">
@@ -72,7 +72,7 @@ export default function Services() {
           <div className="flex flex-col items-center justify-center space-y-10">
             <div className="flex flex-col items-center justify-center space-y-4">
               <h1 className="text-3xl tracking-wide">MÍDIA SOCIAL</h1>
-              <hr className="h-[3px] w-[3vw] rounded border-0 bg-brand-yellow"></hr>
+              <hr className="h-[3px] w-[5vw] rounded border-0 bg-brand-yellow"></hr>
             </div>
 
             <p className="max-w-[220px] text-center">

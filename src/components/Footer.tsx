@@ -5,6 +5,10 @@ import Logo from '@/Icons/Logo'
 import Whatsapp from '@/Icons/Whatsapp'
 
 export default function Footer() {
+  const scrollToTop = () => {
+    console.log('deu certo')
+  }
+
   return (
     <div className="flex h-[468px] w-full flex-col items-center justify-center space-y-8 bg-[#FFB401] tracking-[.1em] text-slate-light-1">
       <div className="flex items-start justify-center gap-40 pb-12">
@@ -47,7 +51,7 @@ export default function Footer() {
           <Facebook className="w-8" />
         </div>
 
-        <button className="absolute right-[10%] flex items-center space-x-3">
+        <button onClick={scrollToTop} className="absolute right-[10%] flex items-center space-x-3">
           <p className="font-medium">VOLTAR AO TOPO</p>
           <ArrowUp className="w-6" />
         </button>
