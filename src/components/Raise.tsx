@@ -1,6 +1,6 @@
-import OrbitEllipse from '@/Designs/OrbitEllipse'
-import Square from '@/Designs/Square'
-import ArrowDown from '@/Icons/ArrowDown'
+import OrbitEllipse from '@/designs/OrbitEllipse'
+import Square from '@/designs/Square'
+import ArrowDown from '@/icons/ArrowDown'
 
 export default function Raise() {
   return (

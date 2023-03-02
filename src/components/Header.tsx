@@ -1,5 +1,5 @@
 import scrollTo from '@/hooks/scroll-to'
-import Logo from '@/Icons/Logo'
+import Logo from '@/icons/Logo'
 
 export default function Header() {
   return (

@@ -1,9 +1,9 @@
 import scrollTo from '@/hooks/scroll-to'
-import ArrowUp from '@/Icons/ArrowUp'
-import Facebook from '@/Icons/Facebook'
-import Instagram from '@/Icons/Instagram'
-import Logo from '@/Icons/Logo'
-import Whatsapp from '@/Icons/Whatsapp'
+import ArrowUp from '@/icons/ArrowUp'
+import Facebook from '@/icons/Facebook'
+import Instagram from '@/icons/Instagram'
+import Logo from '@/icons/Logo'
+import Whatsapp from '@/icons/Whatsapp'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -27,14 +27,22 @@ export default function Footer() {
         <ul className="flex flex-col items-center space-y-3">
           <span className="text-xl font-bold">Sobre</span>
           <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
-          <li>História</li>
+          <li>
+            <button className="tracking-[.1em]" onClick={() => scrollTo('about')}>
+              História
+            </button>
+          </li>
           <li>Direitos autorais</li>
           <li>Políticas de privacidade</li>
         </ul>
         <ul className="flex flex-col items-center space-y-3">
           <span className="text-xl font-bold">Dúvidas</span>
           <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
-          <li>Fale conosco</li>
+          <li>
+            <button className="tracking-[.1em]" onClick={() => scrollTo('contact')}>
+              Fale conosco
+            </button>
+          </li>
         </ul>
       </div>
       <hr className="h-[2px] w-[80%] rounded border-0 bg-slate-light-1"></hr>

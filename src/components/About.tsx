@@ -1,8 +1,8 @@
-import OrbitEllipseMiddle from '@/Designs/OrbitEllipseMiddle'
-import Square from '@/Designs/Square'
+import OrbitEllipseMiddle from '@/designs/OrbitEllipseMiddle'
+import Square from '@/designs/Square'
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
-import LogoShort from '@/Icons/LogoShort'
+import LogoShort from '@/icons/LogoShort'
 import Image from 'next/image'
 
 export default function About() {

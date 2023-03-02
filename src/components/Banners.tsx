@@ -1,8 +1,8 @@
-import Square from '@/Designs/Square'
+import Square from '@/designs/Square'
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
-import ArrowLeft from '@/Icons/ArrowLeft'
-import ArrowRight from '@/Icons/ArrowRight'
+import ArrowLeft from '@/icons/ArrowLeft'
+import ArrowRight from '@/icons/ArrowRight'
 import Image from 'next/image'
 
 export default function Banners() {

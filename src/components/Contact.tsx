@@ -1,8 +1,8 @@
 import useWindowDimensions from '@/hooks/get-windowDimension'
-import Email from '@/Icons/Email'
-import Instagram from '@/Icons/Instagram'
-import Messenger from '@/Icons/Messenger'
-import Whatsapp from '@/Icons/Whatsapp'
+import Email from '@/icons/Email'
+import Instagram from '@/icons/Instagram'
+import Messenger from '@/icons/Messenger'
+import Whatsapp from '@/icons/Whatsapp'
 import Image from 'next/image'
 
 export default function Contact() {
