@@ -1,6 +1,7 @@
 import OrbitEllipseMiddle from '@/Designs/OrbitEllipseMiddle'
 import Square from '@/Designs/Square'
 import useWindowDimensions from '@/hooks/get-windowDimension'
+import scrollTo from '@/hooks/scroll-to'
 import LogoShort from '@/Icons/LogoShort'
 import Image from 'next/image'
 
@@ -15,7 +16,10 @@ export default function About() {
   }
 
   return (
-    <div className="flex w-full items-center justify-between px-[18%] py-[19vh] text-slate-light-1">
+    <div
+      id="about"
+      className="flex w-full items-center justify-between px-[18%] py-[9vh] text-slate-light-1"
+    >
       <OrbitEllipseMiddle className="absolute left-0 -z-10 object-cover" />
       <OrbitEllipseMiddle className="absolute right-0 -z-10 rotate-180" />
 
@@ -55,7 +59,14 @@ export default function About() {
               <p className="text-sm font-bold">DESIGNERS</p>
             </div>
           </div>
-          <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
+          <div className="flex items-center space-x-5">
+            <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
+              FALE CONOSCO
+            </button>
+            <button onClick={() => scrollTo('services')} className="py-2 px-5">
+              SERVIÇOS
+            </button>
+          </div>
         </div>
       </div>
 

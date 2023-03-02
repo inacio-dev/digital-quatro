@@ -1,5 +1,6 @@
 import Square from '@/Designs/Square'
 import useWindowDimensions from '@/hooks/get-windowDimension'
+import scrollTo from '@/hooks/scroll-to'
 import ArrowLeft from '@/Icons/ArrowLeft'
 import ArrowRight from '@/Icons/ArrowRight'
 import Image from 'next/image'
@@ -49,8 +50,12 @@ export default function Banners() {
           </p>
 
           <div className="space-x-5 pt-9">
-            <button className="bg-brand-yellow py-2 px-5">FALE CONOSCO</button>
-            <button className="py-2 px-5">SAIBA MAIS</button>
+            <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
+              FALE CONOSCO
+            </button>
+            <button onClick={() => scrollTo('services')} className="py-2 px-5">
+              SAIBA MAIS
+            </button>
           </div>
         </div>
       </div>

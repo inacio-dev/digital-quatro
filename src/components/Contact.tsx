@@ -9,7 +9,7 @@ export default function Contact() {
   const { width, height } = useWindowDimensions()
 
   return (
-    <div className="flex items-center justify-between px-[10%]">
+    <div id="contact" className="flex items-center justify-between px-[10%]">
       <Image
         src="/person-5.png"
         width={width ? width * 0.29 : 0}
