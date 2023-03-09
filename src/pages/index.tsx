@@ -15,11 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <Banners />
+        {/* <Banners />
         <Raise />
         <Services />
         <About />
-        <Contact />
+        <Contact /> */}
       </main>
     </>
   )

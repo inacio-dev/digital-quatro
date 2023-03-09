@@ -4,6 +4,7 @@ import Instagram from '@/icons/Instagram'
 import Messenger from '@/icons/Messenger'
 import Whatsapp from '@/icons/Whatsapp'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Contact() {
   const { width, height } = useWindowDimensions()
@@ -29,22 +30,38 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col gap-3 space-y-3 fill-slate-light-1 tracking-normal">
-          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
-            <Whatsapp className="w-9" />
-            <span className="flex-1">WHATSAPP</span>
-          </button>
-          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
-            <Email className="w-8" />
-            <span className="flex-1">EMAIL</span>
-          </button>
-          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
-            <Messenger className="w-8" />
-            <span className="flex-1">MESSENGER</span>
-          </button>
-          <button className="flex h-[46px] w-[200px] items-center bg-brand-yellow px-5">
-            <Instagram className="w-8" />
-            <span className="flex-1">INSTAGRAM</span>
-          </button>
+          <Link
+            target="_blank"
+            href="https://wa.me/message/KV7PBMLW2MUZD1"
+            className="flex h-[46px] w-[200px] items-center gap-5 bg-brand-yellow px-5"
+          >
+            <Whatsapp className="w-9 fill-slate-light-1" />
+            <span>WHATSAPP</span>
+          </Link>
+          <Link
+            target="_blank"
+            href="mailto:contato@digitalquatro.com.br"
+            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
+          >
+            <Email className="w-8 fill-slate-light-1" />
+            <span>EMAIL</span>
+          </Link>
+          <Link
+            target="_blank"
+            href="https://m.me/103825612478929"
+            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
+          >
+            <Messenger className="w-8 fill-slate-light-1" />
+            <span>MESSENGER</span>
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/digitalquatro/"
+            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
+          >
+            <Instagram className="w-8 fill-slate-light-1" />
+            <span>INSTAGRAM</span>
+          </Link>
         </div>
       </div>
     </div>

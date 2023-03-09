@@ -1,5 +1,6 @@
 import OrbitEllipse from '@/designs/OrbitEllipse'
 import Square from '@/designs/Square'
+import scrollTo from '@/hooks/scroll-to'
 import ArrowDown from '@/icons/ArrowDown'
 
 export default function Raise() {
@@ -22,7 +23,9 @@ export default function Raise() {
         <p>COMECE IMEDIATAMENTE</p>
       </div>
 
-      <ArrowDown className="absolute w-6 fill-slate-light-1 pt-[35%]" />
+      <button onClick={() => scrollTo('services')} className="absolute h-fit w-fit pt-[35%]">
+        <ArrowDown className="w-6 fill-slate-light-1" />
+      </button>
     </div>
   )
 }

@@ -8,8 +8,8 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className="flex h-[468px] w-full flex-col items-center justify-center space-y-8 bg-[#FFB401] tracking-[.1em] text-slate-light-1">
-      <div className="flex items-start justify-center gap-40 pb-12">
+    <div className="flex h-fit w-full flex-col items-center justify-center space-y-8 bg-[#FFB401] py-8 tracking-[.1em] text-slate-light-1">
+      <div className="flex flex-col items-start justify-center gap-40 pb-12 lg:flex-row">
         <div className="flex flex-col space-y-8">
           <Logo className="w-[304px] fill-slate-light-1" />
           <span>
