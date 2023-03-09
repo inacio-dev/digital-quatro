@@ -16,33 +16,34 @@ export default function Banners() {
   }
 
   return (
-    <div className={`h-[${height}] flex w-full flex-col text-slate-light-1`}>
+    <div className="flex w-full flex-col text-slate-light-1 lg:pt-0">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="absolute top-[20%] left-[10%] text-8xl font-bold tracking-[.2em]">
+        <h1 className="absolute top-[20%] left-[10%] text-5xl font-bold tracking-[.2em] lg:text-8xl">
           TRÁFEGO
         </h1>
 
-        <div className="absolute top-[60%] left-[14%] flex max-w-[162px] items-center space-x-3">
+        <div className="absolute top-[55%] left-[10%] hidden max-w-[162px] items-center space-x-3 lg:left-[14%] lg:top-[60%] lg:flex">
           <Square className="h-2 w-2 fill-slate-light-1" />
           <p>INCREMENTE O DESIGN DA SUA EMPRESA</p>
         </div>
 
-        <button className="absolute left-[30%] bottom-[30%] z-10 w-16">
+        <button className="absolute bottom-[35%] left-[10%] z-10 w-16 lg:left-[30%]">
           <ArrowLeft className="fill-slate-light-1" />
         </button>
         <Image
           style={styling}
           src="/person-6.png"
-          width={height ? height * 0.503 : 0}
+          width={height ? height * 0.46 : 0}
           quality={100}
           alt={''}
           height={0}
+          className="-z-10 opacity-20 lg:opacity-100"
         />
-        <button className="absolute right-[30%] bottom-[30%] z-10 w-16">
+        <button className="absolute bottom-[35%] right-[10%] z-10 w-16 lg:right-[30%]">
           <ArrowRight className="fill-slate-light-1" />
         </button>
 
-        <div className="absolute right-[15%] max-w-sm">
+        <div className="absolute left-[10%] max-w-xs lg:left-auto lg:right-[10%] lg:max-w-sm">
           <h1 className="text-2xl font-medium">DESEJA INICIAR O TRÁFEGO PAGO NA SUA EMPRESA?</h1>
           <p className="pt-4">
             Potencialize suas vendas e conquiste novos clientes com a poderosa combinação do Google
@@ -59,7 +60,7 @@ export default function Banners() {
           </div>
         </div>
       </div>
-      <div className="flex h-52 w-full items-center justify-between bg-[#0B0B0B] px-[20%] text-xl tracking-[.1em] drop-shadow-upper">
+      <div className="flex h-[18vh] w-full items-center justify-between bg-[#0B0B0B] px-[10%] text-sm tracking-[.1em] drop-shadow-upper lg:h-[29vh] lg:px-[20%] lg:text-xl">
         <div>
           <p>CLIENTES</p>
           <p className="font-bold">SATISFEITOS</p>
