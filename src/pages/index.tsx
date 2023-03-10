@@ -1,6 +1,6 @@
 import About from '@/components/About'
-import Banners from '@/components/Banners'
 import Contact from '@/components/Contact'
+import Opening from '@/components/Opening'
 import Raise from '@/components/Raise'
 import Services from '@/components/Services'
 import Head from 'next/head'
@@ -15,11 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
-        <Banners />
+        <Opening />
         <Raise />
         <Services />
-        {/* <About />
-        <Contact /> */}
+        <About />
+        <Contact />
       </main>
     </>
   )

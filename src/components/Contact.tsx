@@ -10,26 +10,32 @@ export default function Contact() {
   const { width, height } = useWindowDimensions()
 
   return (
-    <div id="contact" className="flex items-center justify-between px-[10%] pt-[13vh]">
+    <div
+      id="contact"
+      className="flex items-center justify-center px-[10%] pt-[13vh] lg:justify-between"
+    >
       <Image
         src="/person-5.png"
-        width={width ? width * 0.29 : 0}
+        width={height ? height * 0.512 : 0}
         alt={''}
         height={0}
-        quality={100}
+        quality={width && width > 1023 ? 100 : 50}
+        className="absolute -z-10 opacity-20 lg:relative lg:opacity-100"
       />
 
-      <div className="flex flex-col items-center justify-center space-y-20 tracking-widest text-slate-light-1">
-        <div className="flex flex-col items-center justify-center space-y-8">
-          <h1 className="text-6xl font-bold ">CONTATE-NOS</h1>
-          <h3 className="text-4xl text-brand-yellow">FALE CONOSCO E TIRE SUAS DÚVIDAS</h3>
+      <div className="flex flex-col items-center justify-center space-y-[5%] tracking-widest text-slate-light-1 lg:space-y-[10%]">
+        <div className="flex flex-col items-center justify-center space-y-[4%]">
+          <h1 className="text-center text-4xl font-bold lg:text-6xl ">CONTATE-NOS</h1>
+          <h3 className="text-center text-2xl text-brand-yellow lg:text-4xl">
+            FALE CONOSCO E TIRE SUAS DÚVIDAS
+          </h3>
           <p className="max-w-md text-center">
             Escolha o método de sua preferência abaixo e entraremos em contato o mais breve
             possível.
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 space-y-3 fill-slate-light-1 tracking-normal">
+        <div className="flex flex-col gap-3 space-y-3 fill-slate-light-1 pb-[10%] tracking-normal lg:pb-0">
           <Link
             target="_blank"
             href="https://wa.me/message/KV7PBMLW2MUZD1"

@@ -18,20 +18,20 @@ export default function About() {
   return (
     <div
       id="about"
-      className="flex w-full items-center justify-between px-[18%] py-[9vh] text-slate-light-1"
+      className="flex w-full items-center justify-center px-[18%] py-[9vh] text-slate-light-1 lg:justify-between"
     >
-      <OrbitEllipseMiddle className="absolute left-0 -z-10 object-cover" />
-      <OrbitEllipseMiddle className="absolute right-0 -z-10 rotate-180" />
+      <OrbitEllipseMiddle className="absolute left-0 -z-10 hidden object-cover lg:flex" />
+      <OrbitEllipseMiddle className="absolute right-0 -z-10 hidden rotate-180 lg:flex" />
 
       <div>
-        <div className="flex items-center justify-center">
+        <div className="-ml-[20%] flex items-center justify-center">
           <LogoShort />
-          <div className="flex items-center justify-center text-6xl">
+          <div className="flex flex-col items-center justify-center text-4xl lg:flex-row lg:text-6xl">
             <h1 className="flex font-semibold tracking-widest">Sobre</h1>
             <h1 className="pl-3 font-light text-brand-yellow">a Digital</h1>
           </div>
         </div>
-        <div className="space-y-8 pl-[20%]">
+        <div className="space-y-8 lg:pl-[20%]">
           <p className="max-w-md">
             Ei, que bom que você chegou à nossa agência de marketing digital! Nós somos as pessoas
             que podem ajudar sua empresa a crescer online. Com uma pitada de criatividade e muita
@@ -77,6 +77,7 @@ export default function About() {
         alt={''}
         height={0}
         quality={100}
+        className="hidden lg:flex"
       />
     </div>
   )
