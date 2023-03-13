@@ -1,6 +1,10 @@
 import { services } from '@/arrays/services'
+import useWindowDimensions from '@/hooks/get-windowDimension'
+import clsx from 'clsx'
 
 export default function Services() {
+  const { width, height } = useWindowDimensions()
+
   return (
     <div
       id="services"
@@ -13,7 +17,12 @@ export default function Services() {
         </h2>
       </div>
 
-      <div className="flex w-full flex-col items-center justify-center space-y-[3%] font-medium lg:flex-row lg:space-y-0 lg:space-x-[5%]">
+      <div
+        className={clsx(
+          'grid w-full items-center justify-center justify-items-center space-y-[3%] px-4 font-medium lg:flex lg:flex-row lg:space-y-0 lg:space-x-[5%]',
+          width && width < 700 ? 'grid-cols-1' : 'grid-cols-2'
+        )}
+      >
         {services.map((service, index) => (
           <div key={index} className="h-[400px] w-[280px] border-2 border-slate-light-1">
             <div className="flex h-14 w-14 items-center justify-center self-baseline bg-slate-light-1 text-3xl tracking-widest text-slate-dark-1">
