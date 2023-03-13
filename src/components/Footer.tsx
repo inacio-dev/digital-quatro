@@ -20,10 +20,26 @@ export default function Footer() {
           <ul className="flex flex-col items-center space-y-3">
             <span className="text-xl font-bold">Serviços</span>
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
-            <li>Tráfego Pago</li>
-            <li>Design Gráfico</li>
-            <li>Mídia Social</li>
-            <li>Desenvolvimento Web</li>
+            <li>
+              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
+                Tráfego Pago
+              </button>
+            </li>
+            <li>
+              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
+                Design Gráfico
+              </button>
+            </li>
+            <li>
+              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
+                Mídia Social
+              </button>
+            </li>
+            <li>
+              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
+                Desenvolvimento Web
+              </button>
+            </li>
           </ul>
           <ul className="flex flex-col items-center space-y-3">
             <span className="text-xl font-bold">Sobre</span>
