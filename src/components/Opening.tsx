@@ -12,7 +12,7 @@ export default function Opening() {
   }, [model])
 
   return (
-    <div className="flex h-[100vh] min-h-[100vh] w-full flex-col text-slate-light-1 lg:pt-0">
+    <div className="flex h-fit w-full flex-col text-slate-light-1 lg:h-[100vh] lg:min-h-[100vh] lg:pt-0">
       <Banner id={bannerId} setBannerId={setBannerId} />
     </div>
   )

@@ -40,7 +40,7 @@ export default function ServiceCurrent({
       </div>
 
       {!showFullText && service ? (
-        <div className="grid h-[40vh] grid-cols-2 items-start justify-items-center">
+        <div className="flex h-fit flex-col items-start justify-items-center lg:grid lg:h-[40vh] lg:grid-cols-2">
           <p className="max-w-[60%]">{service.minText}</p>
           {height && (
             <Image
@@ -48,7 +48,7 @@ export default function ServiceCurrent({
               width={height * setImageHeight(service.imageDetail)}
               height={0}
               alt=""
-              className="-z-10 justify-self-center object-cover brightness-[30%] lg:brightness-100"
+              className="-z-10 hidden justify-self-center object-cover lg:flex"
               quality={100}
             />
           )}

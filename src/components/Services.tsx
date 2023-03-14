@@ -15,8 +15,8 @@ export default function Services() {
     <div
       id="services"
       className={clsx(
-        'flex h-[90vh] w-full flex-col items-center justify-center  text-slate-light-1',
-        currentService ? '' : 'space-y-[5%] py-[10vh]'
+        'flex h-fit w-full flex-col items-center justify-center text-slate-light-1 lg:h-[90vh]',
+        currentService ? '' : 'space-y-[5%] py-[5vh] lg:py-[10vh]'
       )}
     >
       {currentService === undefined ? (
