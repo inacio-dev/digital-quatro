@@ -33,15 +33,20 @@ export default function ServiceCurrent({
   const { width, height } = useWindowDimensions()
 
   return (
-    <div className="flex h-[70vh] w-full flex-col items-center justify-center text-slate-light-1">
+    <div className="flex h-fit w-full flex-col items-center justify-center text-slate-light-1 lg:h-[70vh]">
       <div className="flex w-full flex-row items-end justify-center space-x-[1%] pb-20 tracking-widest">
-        <h1 className="text-8xl font-bold">{service?.name[1]}</h1>
-        <p className="text-4xl font-light">{service?.name[2]}</p>
+        <h1 className="text-4xl font-bold tracking-widest lg:text-8xl">{service?.name[1]}</h1>
+        <p className="text-xl font-light tracking-widest lg:text-3xl">{service?.name[2]}</p>
       </div>
 
       {!showFullText && service ? (
-        <div className="flex h-fit flex-col items-start justify-items-center lg:grid lg:h-[40vh] lg:grid-cols-2">
-          <p className="max-w-[60%]">{service.minText}</p>
+        <div className="flex h-fit flex-col items-center justify-center lg:grid lg:h-[40vh] lg:grid-cols-2 lg:items-start lg:justify-items-center">
+          <div className="space-y-[3%] px-[10%] text-base lg:text-lg">
+            {service.minText.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+
           {height && (
             <Image
               src={service.imageDetail}
@@ -54,9 +59,14 @@ export default function ServiceCurrent({
           )}
         </div>
       ) : (
-        <div className="grid h-[40vh] grid-cols-2 items-start justify-items-center">
-          <p className="max-w-[60%]">{service?.text[1]}</p>
-          <p className="max-w-[60%]">{service?.text[1]}</p>
+        <div className="flex h-fit w-full flex-col items-center justify-center text-base lg:grid lg:grid-cols-2 lg:items-start lg:justify-items-center lg:pb-[5%] lg:text-lg">
+          {service?.text.map((text, index) => (
+            <div key={index} className="space-y-[3%] px-[10%]">
+              {text.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          ))}
         </div>
       )}
     </div>

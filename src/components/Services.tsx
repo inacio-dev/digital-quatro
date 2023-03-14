@@ -1,3 +1,4 @@
+import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import ArrowLeft from '@/icons/ArrowLeft'
 import clsx from 'clsx'
@@ -8,22 +9,66 @@ import ServicesGrid from './ServicesGrid'
 export default function Services() {
   const [currentService, setCurrentService] = useState<number | undefined>()
   const [showFullText, setShowFullText] = useState(false)
+  const [blockChangeHeight, setBlockChangeHeight] = useState(false)
 
-  useEffect(() => {}, [])
+  const { width, height } = useWindowDimensions()
+
+  const listenToScroll = () => {
+    const heightToHideFrom = document.getElementById('services')?.scrollHeight
+    const heightToHideTo = document.getElementById('services')?.scrollWidth
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop
+
+    if (width && width > 1023) {
+      if (heightToHideFrom && heightToHideTo) {
+        if (
+          winScroll < heightToHideFrom - 200 ||
+          winScroll > heightToHideTo + heightToHideFrom + 200
+        ) {
+          setCurrentService(undefined)
+          setShowFullText(false)
+        }
+      }
+    } else {
+      if (!blockChangeHeight) {
+        if (heightToHideFrom && heightToHideTo) {
+          if (winScroll < 200 || winScroll > heightToHideTo + heightToHideFrom + 200) {
+            setCurrentService(undefined)
+            setShowFullText(false)
+          }
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBlockChangeHeight(false)
+    }, 1500)
+    return () => clearTimeout(timer)
+  }, [blockChangeHeight])
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenToScroll)
+    return () => window.removeEventListener('scroll', listenToScroll)
+  })
 
   return (
     <div
       id="services"
       className={clsx(
         'flex h-fit w-full flex-col items-center justify-center text-slate-light-1 lg:h-[90vh]',
-        currentService ? '' : 'space-y-[5%] py-[5vh] lg:py-[10vh]'
+        currentService ? 'py-[5vh]' : 'space-y-[5%] py-[5vh] lg:py-[10vh]'
       )}
     >
       {currentService === undefined ? (
-        <ServicesGrid setCurrentService={setCurrentService} />
+        <ServicesGrid
+          setCurrentService={setCurrentService}
+          setBlockChangeHeight={setBlockChangeHeight}
+        />
       ) : (
         <>
           <ServiceCurrent id={currentService} showFullText={showFullText} />
+
           <div className="flex h-[18vh] min-h-[18vh] w-full items-center justify-between bg-[#0B0B0B] px-[5%] text-sm tracking-[.1em] drop-shadow-upper lg:h-[20vh] lg:min-h-[20vh] lg:px-[20%] lg:text-xl">
             <button
               onClick={() => {
@@ -39,7 +84,14 @@ export default function Services() {
               <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
                 FALE CONOSCO
               </button>
-              <button onClick={() => setShowFullText(!showFullText)} className="py-2 px-5">
+              <button
+                onClick={() => {
+                  setShowFullText(!showFullText)
+                  scrollTo('services')
+                  setBlockChangeHeight(true)
+                }}
+                className="py-2 px-5"
+              >
                 {showFullText ? <>RESUMIR TEXTO</> : <>EXPANDIR TEXTO</>}
               </button>
             </div>

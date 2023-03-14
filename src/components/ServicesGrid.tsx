@@ -1,12 +1,15 @@
 import { services } from '@/arrays/services'
 import useWindowDimensions from '@/hooks/get-windowDimension'
+import scrollTo from '@/hooks/scroll-to'
 import clsx from 'clsx'
 import { Dispatch, SetStateAction } from 'react'
 
 export default function ServicesGrid({
-  setCurrentService
+  setCurrentService,
+  setBlockChangeHeight
 }: {
   setCurrentService: Dispatch<SetStateAction<number | undefined>>
+  setBlockChangeHeight: Dispatch<SetStateAction<boolean>>
 }) {
   const { width, height } = useWindowDimensions()
 
@@ -26,7 +29,10 @@ export default function ServicesGrid({
         )}
       >
         {services.map((service, index) => (
-          <div key={index} className="h-[400px] w-[280px] border-2 border-slate-light-1">
+          <div
+            key={index}
+            className="flex h-[400px] w-[280px] flex-col border-2 border-slate-light-1"
+          >
             <div className="flex h-14 w-14 items-center justify-center self-baseline bg-slate-light-1 text-3xl tracking-widest text-slate-dark-1">
               {service.id < 10 ? <>.0{service.id + 1}</> : <>.{service.id}</>}
             </div>
@@ -38,13 +44,18 @@ export default function ServicesGrid({
               </div>
 
               <p className="max-w-[220px] text-center">{service.description}</p>
-              <button
-                onClick={() => setCurrentService(Number(service.id))}
-                className="bg-brand-yellow py-2 px-5 font-normal"
-              >
-                SAIBA MAIS
-              </button>
             </div>
+
+            <button
+              onClick={() => {
+                setBlockChangeHeight(true)
+                setCurrentService(Number(service.id))
+                scrollTo('services')
+              }}
+              className="mx-auto mt-auto mb-10 bg-brand-yellow py-2 px-5 font-normal"
+            >
+              SAIBA MAIS
+            </button>
           </div>
         ))}
       </div>
