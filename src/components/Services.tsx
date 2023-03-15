@@ -1,10 +1,13 @@
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import ArrowLeft from '@/icons/ArrowLeft'
+import Phone from '@/icons/Phone'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import ServiceCurrent from './ServiceCurrent'
 import ServicesGrid from './ServicesGrid'
+import TransparentButton from './TransparentButton'
+import YellowButton from './YellowButton'
 
 export default function Services() {
   const [currentService, setCurrentService] = useState<number | undefined>()
@@ -75,25 +78,30 @@ export default function Services() {
                 setCurrentService(undefined)
                 setShowFullText(false)
               }}
-              className="flex items-center justify-center gap-3"
+              className="group relative flex items-center justify-center gap-3 overflow-hidden py-2 px-5 leading-none"
             >
+              <span className="absolute inset-0 translate-x-full transition-transform group-hover:translate-x-0 group-hover:border-b-2 group-hover:delay-100 group-hover:duration-300"></span>
               <ArrowLeft className="w-8 fill-slate-light-1" /> VOLTAR
             </button>
 
             <div className="flex items-center justify-center space-x-5">
-              <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
-                FALE CONOSCO
-              </button>
-              <button
+              <YellowButton
+                onClick={() => scrollTo('contact')}
+                title="FALE CONOSCO"
+                titleHover={undefined}
+                iconHover={<Phone className="w-8 fill-slate-light-1" />}
+                classPlus={undefined}
+                backgroundHover="bg-[#0B0B0B]"
+              />
+              <TransparentButton
                 onClick={() => {
                   setShowFullText(!showFullText)
                   scrollTo('services')
                   setBlockChangeHeight(true)
                 }}
-                className="py-2 px-5"
-              >
-                {showFullText ? <>RESUMIR TEXTO</> : <>EXPANDIR TEXTO</>}
-              </button>
+                title={showFullText ? 'RESUMIR TEXTO' : 'EXPANDIR TEXTO'}
+                classPlus={undefined}
+              />
             </div>
           </div>
         </>

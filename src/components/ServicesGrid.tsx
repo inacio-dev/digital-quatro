@@ -1,8 +1,10 @@
 import { services } from '@/arrays/services'
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
+import ArrowRight from '@/icons/ArrowRight'
 import clsx from 'clsx'
 import { Dispatch, SetStateAction } from 'react'
+import YellowButton from './YellowButton'
 
 export default function ServicesGrid({
   setCurrentService,
@@ -46,16 +48,18 @@ export default function ServicesGrid({
               <p className="max-w-[220px] text-center">{service.description}</p>
             </div>
 
-            <button
+            <YellowButton
               onClick={() => {
                 setBlockChangeHeight(true)
                 setCurrentService(Number(service.id))
                 scrollTo('services')
               }}
-              className="mx-auto mt-auto mb-10 bg-brand-yellow py-2 px-5 font-normal"
-            >
-              SAIBA MAIS
-            </button>
+              title={'SAIBA MAIS'}
+              titleHover={undefined}
+              iconHover={<ArrowRight className="w-8 fill-slate-light-1" />}
+              classPlus="mx-auto mt-auto mb-10"
+              backgroundHover="bg-slate-dark-1"
+            />
           </div>
         ))}
       </div>

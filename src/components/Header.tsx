@@ -3,6 +3,7 @@ import useWindowDimensions from '@/hooks/get-windowDimension'
 import Logo from '@/icons/Logo'
 import Menu from '@/icons/Menu'
 import { useEffect, useState } from 'react'
+import TransparentButton from './TransparentButton'
 
 export default function Header() {
   const { width, height } = useWindowDimensions()
@@ -22,47 +23,55 @@ export default function Header() {
       </div>
       {showMenu && (
         <div className="grid w-full grid-cols-2 items-center justify-center space-y-5 py-5 lg:hidden">
-          <button
+          <TransparentButton
             onClick={() => {
               scrollTo('')
               setShowMenu(false)
             }}
-          >
-            Home
-          </button>
-          <button
+            title="Home"
+            classPlus={undefined}
+          />
+          <TransparentButton
             onClick={() => {
               scrollTo('about')
               setShowMenu(false)
             }}
-          >
-            Sobre
-          </button>
-          <button
+            title="Sobre"
+            classPlus={undefined}
+          />
+          <TransparentButton
             onClick={() => {
               scrollTo('services')
               setShowMenu(false)
             }}
-          >
-            Serviços
-          </button>
-          <button
+            title="Serviços"
+            classPlus={undefined}
+          />
+          <TransparentButton
             onClick={() => {
               scrollTo('contact')
               setShowMenu(false)
             }}
-          >
-            Fale Conosco
-          </button>
+            title="Fale Conosco"
+            classPlus={undefined}
+          />
         </div>
       )}
 
       <div className="hidden w-full items-center justify-center space-x-[12%] px-[10%] lg:flex">
         <Logo className="w-[114px] fill-slate-light-1" />
-        <button onClick={() => scrollTo('')}>Home</button>
-        <button onClick={() => scrollTo('about')}>Sobre</button>
-        <button onClick={() => scrollTo('services')}>Serviços</button>
-        <button onClick={() => scrollTo('contact')}>Fale Conosco</button>
+        <TransparentButton onClick={() => scrollTo('')} title="Home" classPlus={undefined} />
+        <TransparentButton onClick={() => scrollTo('about')} title="Sobre" classPlus={undefined} />
+        <TransparentButton
+          onClick={() => scrollTo('services')}
+          title="Serviços"
+          classPlus={undefined}
+        />
+        <TransparentButton
+          onClick={() => scrollTo('contact')}
+          title="Fale Conosco"
+          classPlus={undefined}
+        />
       </div>
     </div>
   )

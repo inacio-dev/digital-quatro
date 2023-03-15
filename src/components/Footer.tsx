@@ -5,6 +5,7 @@ import Instagram from '@/icons/Instagram'
 import Logo from '@/icons/Logo'
 import Whatsapp from '@/icons/Whatsapp'
 import Link from 'next/link'
+import TransparentButton from './TransparentButton'
 
 export default function Footer() {
   return (
@@ -21,33 +22,43 @@ export default function Footer() {
             <span className="text-xl font-bold">Serviços</span>
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
-                Tráfego Pago
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('services')}
+                title="Tráfego Pago"
+                classPlus="tracking-[.1em]"
+              />
             </li>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
-                Design Gráfico
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('services')}
+                title="Design Gráfico"
+                classPlus="tracking-[.1em]"
+              />
             </li>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
-                Mídia Social
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('services')}
+                title="Mídia Social"
+                classPlus="tracking-[.1em]"
+              />
             </li>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('services')}>
-                Desenvolvimento Web
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('services')}
+                title="Desenvolvimento Web"
+                classPlus="tracking-[.1em]"
+              />
             </li>
           </ul>
           <ul className="flex flex-col items-center space-y-3">
             <span className="text-xl font-bold">Sobre</span>
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('about')}>
-                História
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('about')}
+                title="História"
+                classPlus="tracking-[.1em]"
+              />
             </li>
             <li>Direitos autorais</li>
             <li>Políticas de privacidade</li>
@@ -56,9 +67,11 @@ export default function Footer() {
             <span className="text-xl font-bold">Dúvidas</span>
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
-              <button className="tracking-[.1em]" onClick={() => scrollTo('contact')}>
-                Fale conosco
-              </button>
+              <TransparentButton
+                onClick={() => scrollTo('contact')}
+                title="Fale conosco"
+                classPlus="tracking-[.1em]"
+              />
             </li>
           </ul>
         </div>
@@ -69,21 +82,21 @@ export default function Footer() {
           <Link
             target="_blank"
             href="https://wa.me/message/KV7PBMLW2MUZD1"
-            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40"
+            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40 transition-all hover:bg-transparent hover:delay-100 hover:duration-200"
           >
             <Whatsapp className="w-9 fill-slate-light-1" />
           </Link>
           <Link
             target="_blank"
             href="https://www.instagram.com/digitalquatro/"
-            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40"
+            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40 transition-all hover:bg-transparent hover:delay-100 hover:duration-200"
           >
             <Instagram className="w-7 fill-slate-light-1" />
           </Link>
           <Link
             target="_blank"
             href="https://www.facebook.com/digitalquatro/"
-            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40"
+            className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-dark-8 bg-opacity-40 transition-all hover:bg-transparent hover:delay-100 hover:duration-200"
           >
             <Facebook className="w-8 fill-slate-light-1" />
           </Link>
@@ -91,8 +104,9 @@ export default function Footer() {
 
         <button
           onClick={() => scrollTo('')}
-          className="flex items-center space-x-3 pt-6 lg:absolute lg:right-[10%] lg:pt-0"
+          className="group relative flex items-center justify-center space-x-3 overflow-hidden px-2 py-3 leading-none lg:absolute lg:right-[10%]"
         >
+          <span className="absolute inset-0 -translate-x-full transition-transform group-hover:translate-x-0 group-hover:border-y-2 group-hover:delay-100 group-hover:duration-300"></span>
           <p className="font-medium">VOLTAR AO TOPO</p>
           <ArrowUp className="w-6" />
         </button>

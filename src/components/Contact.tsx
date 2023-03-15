@@ -5,6 +5,7 @@ import Messenger from '@/icons/Messenger'
 import Whatsapp from '@/icons/Whatsapp'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactButton from './ContactButton'
 
 export default function Contact() {
   const { width, height } = useWindowDimensions()
@@ -36,38 +37,26 @@ export default function Contact() {
         </div>
 
         <div className="flex flex-col gap-3 space-y-3 fill-slate-light-1 pb-[10%] tracking-normal lg:pb-0">
-          <Link
-            target="_blank"
+          <ContactButton
             href="https://wa.me/message/KV7PBMLW2MUZD1"
-            className="flex h-[46px] w-[200px] items-center gap-5 bg-brand-yellow px-5"
-          >
-            <Whatsapp className="w-9 fill-slate-light-1" />
-            <span>WHATSAPP</span>
-          </Link>
-          <Link
-            target="_blank"
+            icon={<Whatsapp className="w-9 fill-slate-light-1" />}
+            text="WHATSAPP"
+          />
+          <ContactButton
             href="mailto:contato@digitalquatro.com.br"
-            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
-          >
-            <Email className="w-8 fill-slate-light-1" />
-            <span>EMAIL</span>
-          </Link>
-          <Link
-            target="_blank"
+            icon={<Email className="w-8 fill-slate-light-1" />}
+            text="EMAIL"
+          />
+          <ContactButton
             href="https://m.me/103825612478929"
-            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
-          >
-            <Messenger className="w-8 fill-slate-light-1" />
-            <span>MESSENGER</span>
-          </Link>
-          <Link
-            target="_blank"
+            icon={<Messenger className="w-8 fill-slate-light-1" />}
+            text="MESSENGER"
+          />
+          <ContactButton
             href="https://www.instagram.com/digitalquatro/"
-            className="flex h-[46px] w-[200px] items-center gap-6 bg-brand-yellow px-5"
-          >
-            <Instagram className="w-8 fill-slate-light-1" />
-            <span>INSTAGRAM</span>
-          </Link>
+            icon={<Instagram className="w-8 fill-slate-light-1" />}
+            text="INSTAGRAM"
+          />
         </div>
       </div>
     </div>

@@ -3,7 +3,10 @@ import Square from '@/designs/Square'
 import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import LogoShort from '@/icons/LogoShort'
+import Phone from '@/icons/Phone'
 import Image from 'next/image'
+import TransparentButton from './TransparentButton'
+import YellowButton from './YellowButton'
 
 export default function About() {
   const { width, height } = useWindowDimensions()
@@ -60,12 +63,19 @@ export default function About() {
             </div>
           </div>
           <div className="flex items-center space-x-5">
-            <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
-              FALE CONOSCO
-            </button>
-            <button onClick={() => scrollTo('services')} className="py-2 px-5">
-              SERVIÇOS
-            </button>
+            <YellowButton
+              onClick={() => scrollTo('contact')}
+              title="FALE CONOSCO"
+              titleHover={undefined}
+              iconHover={<Phone className="w-8 fill-slate-light-1" />}
+              classPlus={undefined}
+              backgroundHover="bg-slate-dark-1"
+            />
+            <TransparentButton
+              onClick={() => scrollTo('services')}
+              title="SERVIÇOS"
+              classPlus={undefined}
+            />
           </div>
         </div>
       </div>

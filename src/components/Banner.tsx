@@ -4,9 +4,12 @@ import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import ArrowLeft from '@/icons/ArrowLeft'
 import ArrowRight from '@/icons/ArrowRight'
+import Phone from '@/icons/Phone'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
+import TransparentButton from './TransparentButton'
+import YellowButton from './YellowButton'
 
 function setImageHeight(image: string) {
   if (image.includes('6')) {
@@ -105,12 +108,19 @@ export default function Banner({
           <p className="pt-4 text-[2vh]">{banner?.description}</p>
 
           <div className="space-x-5 pt-9">
-            <button onClick={() => scrollTo('contact')} className="bg-brand-yellow py-2 px-5">
-              FALE CONOSCO
-            </button>
-            <button onClick={() => scrollTo('services')} className="py-2 px-5">
-              SAIBA MAIS
-            </button>
+            <YellowButton
+              onClick={() => scrollTo('contact')}
+              title="FALE CONOSCO"
+              titleHover={undefined}
+              iconHover={<Phone className="w-8 fill-slate-light-1" />}
+              classPlus={undefined}
+              backgroundHover="bg-slate-dark-1"
+            />
+            <TransparentButton
+              onClick={() => scrollTo('services')}
+              title="SAIBA MAIS"
+              classPlus={undefined}
+            />
           </div>
         </div>
       </div>
