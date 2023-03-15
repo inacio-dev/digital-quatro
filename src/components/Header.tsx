@@ -21,6 +21,7 @@ export default function Header() {
           <Menu className="w-12 fill-slate-light-1" />
         </button>
       </div>
+
       {showMenu && (
         <div className="grid w-full grid-cols-2 items-center justify-center space-y-5 py-5 lg:hidden">
           <TransparentButton
