@@ -25,28 +25,28 @@ export default function Footer() {
               <TransparentButton
                 onClick={() => scrollTo('services')}
                 title="Tráfego Pago"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
                 onClick={() => scrollTo('services')}
                 title="Design Gráfico"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
                 onClick={() => scrollTo('services')}
                 title="Mídia Social"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
                 onClick={() => scrollTo('services')}
                 title="Desenvolvimento Web"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
           </ul>
@@ -57,7 +57,7 @@ export default function Footer() {
               <TransparentButton
                 onClick={() => scrollTo('about')}
                 title="História"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
             <li>Direitos autorais</li>
@@ -70,7 +70,7 @@ export default function Footer() {
               <TransparentButton
                 onClick={() => scrollTo('contact')}
                 title="Fale conosco"
-                classPlus="tracking-[.1em]"
+                classplus="tracking-[.1em]"
               />
             </li>
           </ul>

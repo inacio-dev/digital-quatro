@@ -29,7 +29,7 @@ export default function Header() {
               setShowMenu(false)
             }}
             title="Home"
-            classPlus={undefined}
+            classplus={undefined}
           />
           <TransparentButton
             onClick={() => {
@@ -37,7 +37,7 @@ export default function Header() {
               setShowMenu(false)
             }}
             title="Sobre"
-            classPlus={undefined}
+            classplus={undefined}
           />
           <TransparentButton
             onClick={() => {
@@ -45,7 +45,7 @@ export default function Header() {
               setShowMenu(false)
             }}
             title="Serviços"
-            classPlus={undefined}
+            classplus={undefined}
           />
           <TransparentButton
             onClick={() => {
@@ -53,24 +53,24 @@ export default function Header() {
               setShowMenu(false)
             }}
             title="Fale Conosco"
-            classPlus={undefined}
+            classplus={undefined}
           />
         </div>
       )}
 
       <div className="hidden w-full items-center justify-center space-x-[12%] px-[10%] lg:flex">
         <Logo className="w-[114px] fill-slate-light-1" />
-        <TransparentButton onClick={() => scrollTo('')} title="Home" classPlus={undefined} />
-        <TransparentButton onClick={() => scrollTo('about')} title="Sobre" classPlus={undefined} />
+        <TransparentButton onClick={() => scrollTo('')} title="Home" classplus={undefined} />
+        <TransparentButton onClick={() => scrollTo('about')} title="Sobre" classplus={undefined} />
         <TransparentButton
           onClick={() => scrollTo('services')}
           title="Serviços"
-          classPlus={undefined}
+          classplus={undefined}
         />
         <TransparentButton
           onClick={() => scrollTo('contact')}
           title="Fale Conosco"
-          classPlus={undefined}
+          classplus={undefined}
         />
       </div>
     </div>

@@ -60,7 +60,7 @@ export default function Banner({
           {banner?.name}
         </h1>
 
-        <button onClick={() => setBannerId(id === 0 ? 3 : id - 1)}>
+        <button onClick={() => setBannerId(id === 0 ? 3 : id - 1)} className="group">
           <div className="absolute top-[55%] left-[10%] hidden max-w-[200px] items-center space-x-3 text-left lg:left-[14%] lg:top-[60%] lg:flex">
             <Square className="h-2 w-2 fill-slate-light-1" />
             <p>{banner?.leftBanner}</p>
@@ -72,6 +72,7 @@ export default function Banner({
               height && height < 770 ? 'bottom-[30%]' : 'bottom-[35%]'
             )}
           />
+          <span className="absolute inset-0 -z-10 -translate-x-[101%] bg-black opacity-30 drop-shadow-upper transition-transform group-hover:-translate-x-[50%] group-hover:delay-100 group-hover:duration-300"></span>
         </button>
 
         {banner && (
@@ -96,11 +97,12 @@ export default function Banner({
         <button
           onClick={() => setBannerId(id === 3 ? 0 : id + 1)}
           className={clsx(
-            'absolute right-[10%] z-10 w-10 lg:right-[30%] lg:w-16',
+            'group absolute right-[20%] h-full w-full lg:right-[50%]',
             height && height < 770 ? 'bottom-[30%]' : 'bottom-[35%]'
           )}
         >
-          <ArrowRight className="fill-slate-light-1" />
+          <ArrowRight className="z-10 w-10 fill-slate-light-1 lg:w-16" />
+          <span className="absolute inset-0 -z-10 -translate-x-[101%] bg-black opacity-30 drop-shadow-upper transition-transform group-hover:-translate-x-[50%] group-hover:delay-100 group-hover:duration-300"></span>
         </button>
 
         <div className="absolute left-[10%] max-w-lg pr-[10%] lg:left-auto lg:right-[10%] lg:max-w-sm lg:pr-0">
@@ -111,15 +113,15 @@ export default function Banner({
             <YellowButton
               onClick={() => scrollTo('contact')}
               title="FALE CONOSCO"
-              titleHover={undefined}
-              iconHover={<Phone className="w-8 fill-slate-light-1" />}
-              classPlus={undefined}
-              backgroundHover="bg-slate-dark-1"
+              titlehover={undefined}
+              iconhover={<Phone className="w-8 fill-slate-light-1" />}
+              classplus={undefined}
+              backgroundhover="bg-slate-dark-1"
             />
             <TransparentButton
               onClick={() => scrollTo('services')}
               title="SAIBA MAIS"
-              classPlus={undefined}
+              classplus={undefined}
             />
           </div>
         </div>

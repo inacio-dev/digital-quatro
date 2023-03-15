@@ -66,15 +66,15 @@ export default function About() {
             <YellowButton
               onClick={() => scrollTo('contact')}
               title="FALE CONOSCO"
-              titleHover={undefined}
-              iconHover={<Phone className="w-8 fill-slate-light-1" />}
-              classPlus={undefined}
-              backgroundHover="bg-slate-dark-1"
+              titlehover={undefined}
+              iconhover={<Phone className="w-8 fill-slate-light-1" />}
+              classplus={undefined}
+              backgroundhover="bg-slate-dark-1"
             />
             <TransparentButton
               onClick={() => scrollTo('services')}
               title="SERVIÇOS"
-              classPlus={undefined}
+              classplus={undefined}
             />
           </div>
         </div>

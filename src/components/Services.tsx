@@ -88,10 +88,10 @@ export default function Services() {
               <YellowButton
                 onClick={() => scrollTo('contact')}
                 title="FALE CONOSCO"
-                titleHover={undefined}
-                iconHover={<Phone className="w-8 fill-slate-light-1" />}
-                classPlus={undefined}
-                backgroundHover="bg-[#0B0B0B]"
+                titlehover={undefined}
+                iconhover={<Phone className="w-8 fill-slate-light-1" />}
+                classplus={undefined}
+                backgroundhover="bg-[#0B0B0B]"
               />
               <TransparentButton
                 onClick={() => {
@@ -100,7 +100,7 @@ export default function Services() {
                   setBlockChangeHeight(true)
                 }}
                 title={showFullText ? 'RESUMIR TEXTO' : 'EXPANDIR TEXTO'}
-                classPlus={undefined}
+                classplus={undefined}
               />
             </div>
           </div>

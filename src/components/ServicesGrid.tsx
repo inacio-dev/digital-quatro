@@ -55,10 +55,10 @@ export default function ServicesGrid({
                 scrollTo('services')
               }}
               title={'SAIBA MAIS'}
-              titleHover={undefined}
-              iconHover={<ArrowRight className="w-8 fill-slate-light-1" />}
-              classPlus="mx-auto mt-auto mb-10"
-              backgroundHover="bg-slate-dark-1"
+              titlehover={undefined}
+              iconhover={<ArrowRight className="w-8 fill-slate-light-1" />}
+              classplus="mx-auto mt-auto mb-10"
+              backgroundhover="bg-slate-dark-1"
             />
           </div>
         ))}

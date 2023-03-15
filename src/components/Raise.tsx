@@ -23,8 +23,12 @@ export default function Raise() {
         <p>COMECE IMEDIATAMENTE</p>
       </div>
 
-      <button onClick={() => scrollTo('services')} className="absolute h-fit w-fit pt-[35%]">
+      <button
+        onClick={() => scrollTo('services')}
+        className="group absolute mt-[35%] overflow-hidden px-2 py-3 leading-none"
+      >
         <ArrowDown className="w-6 fill-slate-light-1" />
+        <span className="absolute inset-0 -z-10 -translate-y-full rounded-md bg-slate-dark-3 transition-transform group-hover:translate-y-0 group-hover:delay-100 group-hover:duration-300"></span>
       </button>
     </div>
   )
