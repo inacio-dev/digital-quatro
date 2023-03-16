@@ -8,6 +8,7 @@ import Phone from '@/icons/Phone'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import TransparentButton from './TransparentButton'
 import YellowButton from './YellowButton'
 
@@ -79,18 +80,18 @@ export default function Banner({
           <Image
             src={banner.image}
             width={height ? height * setImageHeight(banner.image) : 0}
-            quality={width && width > 1023 ? 100 : 50}
-            alt={''}
+            alt={banner.image}
             height={0}
+            priority
             className="-z-10 flex-1 justify-self-end object-cover brightness-[30%] lg:brightness-100"
           />
         )}
         <Image
           src="/ellipse-person.svg"
           width={height ? height * 0.45 : 0}
-          quality={width && width > 1023 ? 100 : 50}
           alt={''}
           height={0}
+          priority
           className="absolute -z-20 justify-self-center object-cover opacity-20 lg:opacity-100"
         />
 

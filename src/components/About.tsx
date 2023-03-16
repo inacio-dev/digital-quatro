@@ -82,11 +82,11 @@ export default function About() {
 
       <Image
         style={styling}
-        src="/desktop.png"
+        src="/desktop.webp"
         width={height ? height * 0.4 : 0}
-        alt={''}
+        alt="/desktop.webp"
         height={0}
-        quality={100}
+        priority
         className="invisible hidden lg:visible lg:flex"
       />
     </div>

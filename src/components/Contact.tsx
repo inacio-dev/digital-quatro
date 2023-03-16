@@ -16,11 +16,11 @@ export default function Contact() {
       className="flex items-center justify-center px-[10%] pt-[13vh] lg:justify-between"
     >
       <Image
-        src="/person-5.png"
+        src="/person-5.webp"
         width={height ? height * 0.512 : 0}
-        alt={''}
+        alt="/person-5.webp"
         height={0}
-        quality={width && width > 1023 ? 100 : 50}
+        priority
         className="absolute -z-10 opacity-20 lg:relative lg:opacity-100"
       />
 

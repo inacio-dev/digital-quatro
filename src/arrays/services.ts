@@ -4,7 +4,7 @@ export const services = [
     title: 'DESIGN GRÁFICO',
     description:
       'Desde a criação de logotipos e identidade visual até a produção de peças gráficas para impressão e web, estamos prontos para dar vida à sua marca.',
-    imageDetail: '/person-3.png',
+    imageDetail: '/person-3.webp',
     minText: [
       'Oferecemos serviços de design gráfico criativos e eficazes para ajudar nossos clientes a alcançarem seus objetivos de comunicação visual. Nosso objetivo é entender as necessidades específicas de cada cliente e criar soluções personalizadas utilizando princípios de design, tipografia, cor, imagem e layout.',
       'Além disso, oferecemos uma consultoria gratuita para ajudar nossos clientes a entenderem como o design gráfico pode ajudá-los a alcançarem seus objetivos de comunicação visual. Com orientações personalizadas e atenção às tendências de design, estamos prontos para ajudar sua marca a se destacar no mercado. Entre em contato conosco para saber mais sobre nossos serviços de design gráfico.'
@@ -31,7 +31,7 @@ export const services = [
     title: 'TRÁFEGO PAGO',
     description:
       'Aumente sua visibilidade e conquiste mais clientes com anúncios estratégicos em plataformas como Google e Facebook.',
-    imageDetail: '/person-1.png',
+    imageDetail: '/person-1.webp',
     minText: [
       'Nós, como empresa especializada em tráfego pago, oferecemos serviços de publicidade digital personalizados para ajudar outras empresas a aumentar sua visibilidade online e gerar mais vendas e conversões. Com nossos serviços, seus anúncios serão exibidos para o público certo, com base em interesses, comportamentos e palavras-chave relevantes.',
       'Além disso, oferecemos uma consultoria gratuita na qual um de nossos especialistas em marketing digital irá analisar seu negócio e recomendar a melhor estratégia de tráfego pago para atingir seus objetivos de negócios. Com nossa ajuda, você pode aumentar sua presença online e alcançar mais clientes em potencial. Entre em contato conosco hoje para agendar sua consultoria gratuita e dar o primeiro passo para aumentar seus resultados de marketing online.'
@@ -57,7 +57,7 @@ export const services = [
     title: 'MÍDIA SOCIAL',
     description:
       'Obtenha uma criação de conteúdo envolvente e o gerenciamento completo da sua presença nas mídias sociais.',
-    imageDetail: '/person-9.png',
+    imageDetail: '/person-9.webp',
     minText: [
       'Oferecemos um serviço de mídia social que ajuda nossos clientes a se conectar com outras pessoas, promover produtos e marcas e atingir seus objetivos de negócios. Além disso, fornecemos consultoria gratuita para ajudá-los a utilizar as plataformas de mídia social de forma eficaz e responsável. Com nossa ajuda, os clientes podem utilizar recursos de publicidade e marketing para atingir públicos específicos e medir o sucesso de suas campanhas.',
       'Nosso compromisso com o uso ético e responsável das plataformas de mídia social e nossa adaptação contínua às mudanças nas políticas e algoritmos das plataformas garantem que nossos clientes obtenham os melhores resultados. Se você está procurando um serviço confiável e eficiente de mídia social para ajudar a promover sua empresa, entre em contato conosco para saber como podemos ajudá-lo a alcançar seus objetivos. Aproveite nossa consultoria gratuita para garantir que está utilizando as plataformas de maneira eficaz.'
@@ -83,7 +83,7 @@ export const services = [
     title: 'SITE',
     description:
       'Oferecemos soluções personalizadas para o desenvolvimento de sites, aplicativos e sistemas de gerenciamento de conteúdo.',
-    imageDetail: '/person-4.png',
+    imageDetail: '/person-4.webp',
     minText: [
       'Oferecemos um serviço completo de desenvolvimento de sites web, com um time de especialistas em desenvolvimento que criará para você um site personalizado e exclusivo, com funcionalidades específicas e identidade visual única e atraente para o seu público-alvo.',
       'Além disso, nossos serviços incluem a configuração de tags de conversão para rastrear o comportamento do usuário no site e identificar áreas de melhoria, permitindo que você avalie a efetividade das suas campanhas de marketing digital e publicidade e faça ajustes para maximizar o retorno do investimento. Conte conosco para trabalhar em parceria e entregar um site que atenda às suas demandas específicas e impulsione o sucesso do seu negócio online.'

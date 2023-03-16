@@ -52,9 +52,9 @@ export default function ServiceCurrent({
               src={service.imageDetail}
               width={height * setImageHeight(service.imageDetail)}
               height={0}
-              alt=""
+              alt={service.imageDetail}
+              loading="lazy"
               className="invisible -z-10 hidden justify-self-center object-cover lg:visible lg:flex"
-              quality={100}
             />
           )}
         </div>

@@ -3,7 +3,7 @@ export const banners = [
     id: 0,
     name: 'DESIGN',
     leftBanner: 'ADQUIRA UM SITE TOTALMENTE PERSONALIZADO PARA VOCÊ.',
-    image: '/person-8.png',
+    image: '/person-8.webp',
     title: 'DESEJA TRANFORMAR SUA IDENTIDADE VISUAL EM ALGO EXCLUSIVO?',
     description:
       'Obtenha o que há de melhor em Design Gráfico com nossos serviços únicos e completos para mídias sociais, sites, vídeos e muito mais.',
@@ -20,7 +20,7 @@ export const banners = [
     id: 1,
     name: 'TRÁFEGO',
     leftBanner: 'INCREMENTE O DESIGN DA SUA EMPRESA',
-    image: '/person-6.png',
+    image: '/person-6.webp',
     title: 'DESEJA INICIAR O TRÁFEGO PAGO NA SUA EMPRESA?',
     description:
       'Potencialize suas vendas e conquiste novos clientes com a poderosa combinação do Google Ads e Meta Ads.',
@@ -37,7 +37,7 @@ export const banners = [
     id: 2,
     name: 'SOCIAL',
     leftBanner: 'ALCANCE NOVOS CLIENTES COM TRÁFEGO PAGO',
-    image: '/person-2.png',
+    image: '/person-2.webp',
     title: 'DESEJA ELEVAR O PATAMAR DAS SUAS REDES SOCIAIS?',
     description:
       'Monitoramento de redes sociais, criação e edição de imagem ou vídeo, relatórios de performance e muito mais.',
@@ -54,7 +54,7 @@ export const banners = [
     id: 3,
     name: 'SITE',
     leftBanner: 'OBTENHA COMUNICAÇÃO AMPLA EM MÍDIAS SOCIAIS.',
-    image: '/person-7.png',
+    image: '/person-7.webp',
     title: 'DESEJA UM SITE COMPLETO PARA ATINGIR SEUS OBJETIVOS?',
     description:
       'Adquira landing pages de alta conversão, sites para e-commerce, serviços de manutenção e muito mais, tudo com desenvolvimento do zero e programadores altamente qualificados.',
