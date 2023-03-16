@@ -8,7 +8,6 @@ import Phone from '@/icons/Phone'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 import TransparentButton from './TransparentButton'
 import YellowButton from './YellowButton'
 
@@ -92,6 +91,7 @@ export default function Banner({
           alt={''}
           height={0}
           priority
+          quality={30}
           className="absolute -z-20 justify-self-center object-cover opacity-20 lg:opacity-100"
         />
 

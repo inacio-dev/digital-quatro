@@ -7,5 +7,5 @@ export default function useImageLoader({
   width: number
   quality: number | undefined
 }) {
-  return `https://www.digitalquatro.com.br/${src}?w=${width}&q=${quality || 25}`
+  return `https://www.digitalquatro.com.br/${src}?w=${width}&q=${quality || 75}`
 }
