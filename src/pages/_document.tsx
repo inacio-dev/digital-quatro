@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             src="https://www.googletagmanager.com/ns.html?id=GTM-NBLL36Q"
             height="0"
             width="0"
-            className="hidden"
+            className="invisible hidden"
           ></iframe>
         </noscript>
 

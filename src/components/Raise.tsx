@@ -5,7 +5,7 @@ import ArrowDown from '@/icons/ArrowDown'
 
 export default function Raise() {
   return (
-    <div className="hidden w-full flex-col items-center justify-center py-[34vh] text-slate-light-1 lg:flex">
+    <div className="invisible hidden w-full flex-col items-center justify-center py-[34vh] text-slate-light-1 lg:visible lg:flex">
       <div className="flex flex-col items-center text-7xl tracking-[.2em]">
         <p className="font-semibold">ELEVE SUA</p>
         <p className="font-light">EMPRESA</p>

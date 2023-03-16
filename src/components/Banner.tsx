@@ -61,7 +61,7 @@ export default function Banner({
         </h1>
 
         <button onClick={() => setBannerId(id === 0 ? 3 : id - 1)} className="group">
-          <div className="group absolute top-[55%] left-[10%] hidden max-w-[200px] items-center space-x-3 overflow-hidden py-4 text-left leading-none lg:left-[14%] lg:top-[60%] lg:flex">
+          <div className="group invisible absolute top-[55%] left-[10%] hidden max-w-[200px] items-center space-x-3 overflow-hidden py-4 text-left leading-none lg:visible lg:left-[14%] lg:top-[60%] lg:flex">
             <Square className="h-2 w-2 fill-slate-light-1" />
             <p>{banner?.leftBanner}</p>
             <span className="absolute inset-0 translate-x-full transition-transform group-hover:translate-x-0 group-hover:border-b-2 group-hover:delay-100 group-hover:duration-300"></span>

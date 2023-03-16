@@ -23,8 +23,8 @@ export default function About() {
       id="about"
       className="flex w-full items-center justify-center px-[18%] py-[9vh] text-slate-light-1 lg:justify-between"
     >
-      <OrbitEllipseMiddle className="absolute left-0 -z-10 hidden object-cover lg:flex" />
-      <OrbitEllipseMiddle className="absolute right-0 -z-10 hidden rotate-180 lg:flex" />
+      <OrbitEllipseMiddle className="invisible absolute left-0 -z-10 hidden object-cover lg:visible lg:flex" />
+      <OrbitEllipseMiddle className="invisible absolute right-0 -z-10 hidden rotate-180 lg:visible lg:flex" />
 
       <div>
         <div className="-ml-[20%] flex items-center justify-center">
@@ -87,7 +87,7 @@ export default function About() {
         alt={''}
         height={0}
         quality={100}
-        className="hidden lg:flex"
+        className="invisible hidden lg:visible lg:flex"
       />
     </div>
   )
