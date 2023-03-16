@@ -3,15 +3,28 @@ import Email from '@/icons/Email'
 import Instagram from '@/icons/Instagram'
 import Messenger from '@/icons/Messenger'
 import Whatsapp from '@/icons/Whatsapp'
+import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import ContactButton from './ContactButton'
+import { variants } from './Opening'
 
 export default function Contact() {
   const { width, height } = useWindowDimensions()
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    inView ? controls.start('visible') : controls.start('hidden')
+  }, [controls, inView])
 
   return (
-    <div
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
       id="contact"
       className="flex items-center justify-center px-[10%] pt-[13vh] lg:justify-between"
     >
@@ -59,6 +72,6 @@ export default function Contact() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

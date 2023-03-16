@@ -5,11 +5,7 @@ import ArrowDown from '@/icons/ArrowDown'
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-
-const variants = {
-  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.25 } },
-  hidden: { opacity: 0, y: 30 }
-}
+import { variants } from './Opening'
 
 export default function Raise() {
   const controls = useAnimation()

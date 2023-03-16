@@ -6,47 +6,33 @@ import ArrowLeft from '@/icons/ArrowLeft'
 import ArrowRight from '@/icons/ArrowRight'
 import Phone from '@/icons/Phone'
 import clsx from 'clsx'
+import { AnimationControls } from 'framer-motion'
 import Image from 'next/image'
 import { Dispatch, SetStateAction } from 'react'
 import TransparentButton from './TransparentButton'
 import YellowButton from './YellowButton'
 
-function setImageHeight(image: string) {
-  if (image.includes('6')) {
-    return 0.46
-  }
-  if (image.includes('2')) {
-    return 0.37
-  }
-  if (image.includes('7')) {
-    return 0.53
-  }
-  if (image.includes('8')) {
-    return 0.47
-  }
-
-  return 0
+const styling = {
+  backgroundImage: `url('/ellipse-person.svg')`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: '40vh'
 }
 
 export default function Banner({
   id,
-  setBannerId
+  setBannerId,
+  controls
 }: {
   id: number
   setBannerId: Dispatch<SetStateAction<number>>
+  controls: AnimationControls
 }) {
   const { width, height } = useWindowDimensions()
 
   const banner = banners.find((banner) => {
     return banner.id === id
   })
-
-  const styling = {
-    backgroundImage: `url('/ellipse-person.svg')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: '40vh'
-  }
 
   return (
     <>
@@ -60,7 +46,14 @@ export default function Banner({
           {banner?.name}
         </h1>
 
-        <button onClick={() => setBannerId(id === 0 ? 3 : id - 1)} className="group">
+        <button
+          onClick={async () => {
+            await controls.start('hidden')
+            setBannerId(id === 0 ? 3 : id - 1)
+            await controls.start('visible')
+          }}
+          className="group"
+        >
           <div className="group invisible absolute top-[55%] left-[10%] hidden max-w-[200px] items-center space-x-3 overflow-hidden py-4 text-left leading-none lg:visible lg:left-[14%] lg:top-[60%] lg:flex">
             <Square className="h-2 w-2 fill-slate-light-1" />
             <p>{banner?.leftBanner}</p>
@@ -96,7 +89,11 @@ export default function Banner({
         />
 
         <button
-          onClick={() => setBannerId(id === 3 ? 0 : id + 1)}
+          onClick={async () => {
+            await controls.start('hidden')
+            setBannerId(id === 3 ? 0 : id + 1)
+            controls.start('visible')
+          }}
           className={clsx(
             'group absolute right-[10%] lg:right-[30%]',
             height && height < 770 ? 'bottom-[30%]' : 'bottom-[35%]'
@@ -143,4 +140,21 @@ export default function Banner({
       </div>
     </>
   )
+}
+
+function setImageHeight(image: string) {
+  if (image.includes('6')) {
+    return 0.46
+  }
+  if (image.includes('2')) {
+    return 0.37
+  }
+  if (image.includes('7')) {
+    return 0.53
+  }
+  if (image.includes('8')) {
+    return 0.47
+  }
+
+  return 0
 }

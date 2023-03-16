@@ -3,15 +3,18 @@ import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import ArrowRight from '@/icons/ArrowRight'
 import clsx from 'clsx'
+import { AnimationControls } from 'framer-motion'
 import { Dispatch, SetStateAction } from 'react'
 import YellowButton from './YellowButton'
 
 export default function ServicesGrid({
   setCurrentService,
-  setBlockChangeHeight
+  setBlockChangeHeight,
+  controls
 }: {
   setCurrentService: Dispatch<SetStateAction<number | undefined>>
   setBlockChangeHeight: Dispatch<SetStateAction<boolean>>
+  controls: AnimationControls
 }) {
   const { width, height } = useWindowDimensions()
 
@@ -49,10 +52,12 @@ export default function ServicesGrid({
             </div>
 
             <YellowButton
-              onClick={() => {
+              onClick={async () => {
+                await controls.start('hidden')
                 setBlockChangeHeight(true)
                 setCurrentService(Number(service.id))
                 scrollTo('services')
+                controls.start('visible')
               }}
               title={'SAIBA MAIS'}
               titlehover={undefined}

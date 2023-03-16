@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Banner from './Banner'
 
-const variants = {
-  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.25 } },
+export const variants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } },
   hidden: { opacity: 0, y: 30 }
 }
 
@@ -27,7 +27,7 @@ export default function Opening() {
   return (
     <div className="flex h-fit w-full flex-col text-slate-light-1 lg:h-[100vh] lg:min-h-[100vh] lg:pt-0">
       <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
-        <Banner id={bannerId} setBannerId={setBannerId} />
+        <Banner id={bannerId} setBannerId={setBannerId} controls={controls} />
       </motion.div>
     </div>
   )

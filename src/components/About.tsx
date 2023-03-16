@@ -4,19 +4,29 @@ import useWindowDimensions from '@/hooks/get-windowDimension'
 import scrollTo from '@/hooks/scroll-to'
 import LogoShort from '@/icons/LogoShort'
 import Phone from '@/icons/Phone'
+import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { variants } from './Opening'
 import TransparentButton from './TransparentButton'
 import YellowButton from './YellowButton'
 
+const styling = {
+  backgroundImage: `url('/ellipse-desktop.svg')`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: '100%'
+}
+
 export default function About() {
   const { width, height } = useWindowDimensions()
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
 
-  const styling = {
-    backgroundImage: `url('/ellipse-desktop.svg')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundSize: '100%'
-  }
+  useEffect(() => {
+    inView ? controls.start('visible') : controls.start('hidden')
+  }, [controls, inView])
 
   return (
     <div
@@ -26,7 +36,7 @@ export default function About() {
       <OrbitEllipseMiddle className="invisible absolute left-0 -z-10 hidden object-cover lg:visible lg:flex" />
       <OrbitEllipseMiddle className="invisible absolute right-0 -z-10 hidden rotate-180 lg:visible lg:flex" />
 
-      <div>
+      <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
         <div className="-ml-[20%] flex items-center justify-center">
           <LogoShort />
           <div className="flex flex-col items-center justify-center text-4xl lg:flex-row lg:text-6xl">
@@ -78,17 +88,19 @@ export default function About() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <Image
-        style={styling}
-        src="/desktop.webp"
-        width={height ? height * 0.4 : 0}
-        alt="/desktop.webp"
-        height={0}
-        priority
-        className="invisible hidden lg:visible lg:flex"
-      />
+      <motion.div ref={ref} animate={controls} initial="hidden" variants={variants}>
+        <Image
+          style={styling}
+          src="/desktop.webp"
+          width={height ? height * 0.4 : 0}
+          alt="/desktop.webp"
+          height={0}
+          priority
+          className="invisible hidden lg:visible lg:flex"
+        />
+      </motion.div>
     </div>
   )
 }
