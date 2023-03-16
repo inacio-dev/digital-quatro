@@ -3,11 +3,18 @@ import scrollTo from '@/hooks/scroll-to'
 import ArrowLeft from '@/icons/ArrowLeft'
 import Phone from '@/icons/Phone'
 import clsx from 'clsx'
+import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 import ServiceCurrent from './ServiceCurrent'
 import ServicesGrid from './ServicesGrid'
 import TransparentButton from './TransparentButton'
 import YellowButton from './YellowButton'
+
+const variants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.25 } },
+  hidden: { opacity: 0, y: 30 }
+}
 
 export default function Services() {
   const [currentService, setCurrentService] = useState<number | undefined>()
@@ -15,6 +22,8 @@ export default function Services() {
   const [blockChangeHeight, setBlockChangeHeight] = useState(false)
 
   const { width, height } = useWindowDimensions()
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
 
   const listenToScroll = () => {
     const heightToHideFrom = document.getElementById('services')?.scrollHeight
@@ -55,8 +64,16 @@ export default function Services() {
     return () => window.removeEventListener('scroll', listenToScroll)
   })
 
+  useEffect(() => {
+    inView ? controls.start('visible') : controls.start('hidden')
+  }, [controls, inView])
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
       id="services"
       className={clsx(
         'flex h-fit w-full flex-col items-center justify-center text-slate-light-1 lg:h-[90vh]',
@@ -106,6 +123,6 @@ export default function Services() {
           </div>
         </>
       )}
-    </div>
+    </motion.div>
   )
 }

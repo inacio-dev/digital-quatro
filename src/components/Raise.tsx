@@ -2,10 +2,31 @@ import OrbitEllipse from '@/designs/OrbitEllipse'
 import Square from '@/designs/Square'
 import scrollTo from '@/hooks/scroll-to'
 import ArrowDown from '@/icons/ArrowDown'
+import { motion, useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
+
+const variants = {
+  visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.25 } },
+  hidden: { opacity: 0, y: 30 }
+}
 
 export default function Raise() {
+  const controls = useAnimation()
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    inView ? controls.start('visible') : controls.start('hidden')
+  }, [controls, inView])
+
   return (
-    <div className="invisible hidden w-full flex-col items-center justify-center py-[34vh] text-slate-light-1 lg:visible lg:flex">
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      className="invisible hidden w-full flex-col items-center justify-center py-[34vh] text-slate-light-1 lg:visible lg:flex"
+    >
       <div className="flex flex-col items-center text-7xl tracking-[.2em]">
         <p className="font-semibold">ELEVE SUA</p>
         <p className="font-light">EMPRESA</p>
@@ -30,6 +51,6 @@ export default function Raise() {
         <ArrowDown className="w-6 fill-slate-light-1" />
         <span className="absolute inset-0 -z-10 -translate-y-full rounded-md bg-slate-dark-3 transition-transform group-hover:translate-y-0 group-hover:delay-100 group-hover:duration-300"></span>
       </button>
-    </div>
+    </motion.div>
   )
 }
