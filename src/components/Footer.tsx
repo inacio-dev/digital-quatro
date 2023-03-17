@@ -60,8 +60,20 @@ export default function Footer() {
                 classplus="tracking-[.1em]"
               />
             </li>
-            <li>Direitos autorais</li>
-            <li>Políticas de privacidade</li>
+            <li>
+              <TransparentButton
+                onClick={() => scrollTo('')}
+                title="Direitos autorais"
+                classplus="tracking-[.1em]"
+              />
+            </li>
+            <li>
+              <TransparentButton
+                onClick={() => scrollTo('')}
+                title="Políticas de privacidade"
+                classplus="tracking-[.1em]"
+              />
+            </li>
           </ul>
           <ul className="flex flex-col items-center space-y-3">
             <span className="text-xl font-bold">Dúvidas</span>
