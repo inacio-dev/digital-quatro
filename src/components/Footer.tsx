@@ -5,9 +5,19 @@ import Instagram from '@/icons/Instagram'
 import Logo from '@/icons/Logo'
 import Whatsapp from '@/icons/Whatsapp'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import TransparentButton from './TransparentButton'
+import TransparentLink from './TransparentLink'
 
 export default function Footer() {
+  const [homePage, setHomePage] = useState(true)
+  const router = useRouter()
+
+  useEffect(() => {
+    router.pathname && router.pathname === '/' ? setHomePage(true) : setHomePage(false)
+  }, [router])
+
   return (
     <div className="flex h-fit w-full flex-col items-center justify-center space-y-5 bg-[#FFB401] px-[5%] py-8 tracking-[.1em] text-slate-light-1 lg:space-y-8">
       <div className="flex flex-col items-center justify-center space-y-8 pb-12 lg:flex-row lg:items-start lg:gap-40">
@@ -23,28 +33,36 @@ export default function Footer() {
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('services')}
+                onClick={async () => {
+                  homePage ? scrollTo('services') : (await router.push('/'), scrollTo('services'))
+                }}
                 title="Tráfego Pago"
                 classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('services')}
+                onClick={async () => {
+                  homePage ? scrollTo('services') : (await router.push('/'), scrollTo('services'))
+                }}
                 title="Design Gráfico"
                 classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('services')}
+                onClick={async () => {
+                  homePage ? scrollTo('services') : (await router.push('/'), scrollTo('services'))
+                }}
                 title="Mídia Social"
                 classplus="tracking-[.1em]"
               />
             </li>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('services')}
+                onClick={async () => {
+                  homePage ? scrollTo('services') : (await router.push('/'), scrollTo('services'))
+                }}
                 title="Desenvolvimento Web"
                 classplus="tracking-[.1em]"
               />
@@ -55,21 +73,23 @@ export default function Footer() {
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('about')}
+                onClick={async () => {
+                  homePage ? scrollTo('about') : (await router.push('/'), scrollTo('about'))
+                }}
                 title="História"
                 classplus="tracking-[.1em]"
               />
             </li>
             <li>
-              <TransparentButton
-                onClick={() => scrollTo('')}
+              <TransparentLink
+                href="/terms"
                 title="Direitos autorais"
                 classplus="tracking-[.1em]"
               />
             </li>
             <li>
-              <TransparentButton
-                onClick={() => scrollTo('')}
+              <TransparentLink
+                href="/politics"
                 title="Políticas de privacidade"
                 classplus="tracking-[.1em]"
               />
@@ -80,7 +100,9 @@ export default function Footer() {
             <hr className="h-[2px] w-[62px] rounded border-0 bg-slate-light-1"></hr>
             <li>
               <TransparentButton
-                onClick={() => scrollTo('contact')}
+                onClick={async () => {
+                  homePage ? scrollTo('contact') : (await router.push('/'), scrollTo('contact'))
+                }}
                 title="Fale conosco"
                 classplus="tracking-[.1em]"
               />

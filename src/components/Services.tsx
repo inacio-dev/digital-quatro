@@ -74,9 +74,7 @@ export default function Services() {
               <YellowButton
                 onClick={() => scrollTo('contact')}
                 title="FALE CONOSCO"
-                titlehover={undefined}
                 iconhover={<Phone className="w-8 fill-slate-light-1" />}
-                classplus={undefined}
                 backgroundhover="bg-[#0B0B0B]"
               />
               <TransparentButton
@@ -88,7 +86,6 @@ export default function Services() {
                   controls.start('visible')
                 }}
                 title={showFullText ? 'RESUMIR TEXTO' : 'EXPANDIR TEXTO'}
-                classplus={undefined}
               />
             </div>
           </div>

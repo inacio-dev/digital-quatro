@@ -9,40 +9,52 @@ export default function Terms() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center">
-        <p>
+      <main className="flex w-full flex-col items-start justify-center space-y-8 p-10 tracking-wider text-slate-light-1">
+        <p className="text-base">
           Caro(a) CONTRATANTE, A CONTRATADA, empresa de marketing digital e programação DIGITAL
           QUATRO, inscrita no CNPJ sob o n° 46.948.896/0001-36, representada legalmente por MARINA
           ALVES DE PAULA RIOS, portadora do CPF 065.843.563-96, agradece por escolher nossos
           serviços. Gostaríamos de informar que além dos direitos autorais, também possuímos um
           conjunto de termos e condições de uso que regem nossos serviços. Esses termos são
           aplicáveis a todos os CONTRATANTES que utilizam nossos serviços e incluem os seguintes
-          aspectos: Propriedade Intelectual: Todo o conteúdo que a CONTRATADA desenvolve para o
-          CONTRATANTE é de propriedade da nossa empresa e é protegido por direitos autorais. O
-          CONTRATANTE é concedido uma licença limitada para utilizar o conteúdo em seu projeto, mas
-          não pode reproduzi-lo, distribuí-lo ou comercializá-lo sem a autorização expressa da
-          CONTRATADA. Responsabilidade: A CONTRATADA se esforça para fornecer serviços de alta
-          qualidade, no entanto, não pode garantir que seus serviços atenderão a todas as
-          expectativas do CONTRATANTE. O compromisso da CONTRATADA é fornecer o melhor serviço
-          possível e trabalhar com o CONTRATANTE para resolver quaisquer problemas que possam
-          surgir. Pagamentos: Todos os serviços da CONTRATADA são oferecidos mediante pagamento. Os
-          preços são determinados com base no escopo do projeto e nos serviços necessários. O
-          pagamento deve ser realizado antes do início do projeto e pode ser feito por meio de
-          diversas formas de pagamento disponibilizadas pela CONTRATADA. Sempre que um pagamento for
-          recebido, emitiremos uma nota fiscal de acordo com as leis fiscais aplicáveis.
+          aspectos:
+        </p>
+        <p className="text-base">
+          Propriedade Intelectual: Todo o conteúdo que a CONTRATADA desenvolve para o CONTRATANTE é
+          de propriedade da nossa empresa e é protegido por direitos autorais. O CONTRATANTE é
+          concedido uma licença limitada para utilizar o conteúdo em seu projeto, mas não pode
+          reproduzi-lo, distribuí-lo ou comercializá-lo sem a autorização expressa da CONTRATADA.
+        </p>
+        <p className="text-base">
+          Responsabilidade: A CONTRATADA se esforça para fornecer serviços de alta qualidade, no
+          entanto, não pode garantir que seus serviços atenderão a todas as expectativas do
+          CONTRATANTE. O compromisso da CONTRATADA é fornecer o melhor serviço possível e trabalhar
+          com o CONTRATANTE para resolver quaisquer problemas que possam surgir.
+        </p>
+        <p className="text-base">
+          Pagamentos: Todos os serviços da CONTRATADA são oferecidos mediante pagamento. Os preços
+          são determinados com base no escopo do projeto e nos serviços necessários. O pagamento
+          deve ser realizado antes do início do projeto e pode ser feito por meio de diversas formas
+          de pagamento disponibilizadas pela CONTRATADA. Sempre que um pagamento for recebido,
+          emitiremos uma nota fiscal de acordo com as leis fiscais aplicáveis.
+        </p>
+        <p className="text-base">
           Cancelamentos e reembolsos: Caso seja necessário cancelar o projeto, o CONTRATANTE deve
           informar a CONTRATADA o mais breve possível para que possamos cancelar os serviços e
           proceder ao reembolso, caso seja aplicável, de acordo com as políticas estabelecidas em
-          nossos termos e condições. Política de privacidade: É importante que o CONTRATANTE saiba
-          que a privacidade dos seus dados é extremamente importante para a CONTRATADA. Nossa
-          política de privacidade é rigorosa e os dados fornecidos pelo CONTRATANTE serão utilizados
-          somente para a realização do projeto, não sendo compartilhados ou divulgados a terceiros
-          sem a autorização expressa do CONTRATANTE. Nosso endereço está localizado à Rua Guilherme
-          Rocha, nº 1299, Bairro Centro, município de Fortaleza – Ceará, CEP: 60030-141. Para entrar
-          em contato conosco, utilize nosso endereço eletrônico: contato@digitalquatro.com.br. Estes
-          são alguns dos termos e condições que regem nossos serviços. Se o CONTRATANTE tiver alguma
-          dúvida ou precisar de mais informações, por favor, não hesite em nos contatar.
-          Atenciosamente, [Seu nome ou nome da empresa] - CONTRATADA
+          nossos termos e condições.
+        </p>
+        <p className="text-base">
+          Política de privacidade: É importante que o CONTRATANTE saiba que a privacidade dos seus
+          dados é extremamente importante para a CONTRATADA. Nossa política de privacidade é
+          rigorosa e os dados fornecidos pelo CONTRATANTE serão utilizados somente para a realização
+          do projeto, não sendo compartilhados ou divulgados a terceiros sem a autorização expressa
+          do CONTRATANTE.
+        </p>
+        <p className="text-base">
+          Nosso endereço está localizado à Rua Guilherme Rocha, nº 1299, Bairro Centro, município de
+          Fortaleza – Ceará, CEP: 60030-141. Para entrar em contato conosco, utilize nosso endereço
+          eletrônico: contato@digitalquatro.com.br
         </p>
       </main>
     </>

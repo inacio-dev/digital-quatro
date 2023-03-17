@@ -60,7 +60,6 @@ export default function ServicesGrid({
                 controls.start('visible')
               }}
               title={'SAIBA MAIS'}
-              titlehover={undefined}
               iconhover={<ArrowRight className="w-8 fill-slate-light-1" />}
               classplus="mx-auto mt-auto mb-10"
               backgroundhover="bg-slate-dark-1"

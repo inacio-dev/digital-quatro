@@ -3,10 +3,10 @@ import { ReactElement } from 'react'
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string
-  titlehover: string | undefined
-  iconhover: ReactElement<any, any> | undefined
-  classplus: string | undefined
-  backgroundhover: string | undefined
+  titlehover?: string
+  iconhover?: ReactElement<any, any>
+  classplus?: string
+  backgroundhover?: string
 }
 
 export default function YellowButton(props: ButtonProps) {

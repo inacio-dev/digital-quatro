@@ -4,10 +4,18 @@ import Logo from '@/icons/Logo'
 import Menu from '@/icons/Menu'
 import { useEffect, useState } from 'react'
 import TransparentButton from './TransparentButton'
+import { useRouter } from 'next/router'
 
 export default function Header() {
   const { width, height } = useWindowDimensions()
   const [showMenu, setShowMenu] = useState(false)
+
+  const [homePage, setHomePage] = useState(true)
+  const router = useRouter()
+
+  useEffect(() => {
+    router.pathname && router.pathname === '/' ? setHomePage(true) : setHomePage(false)
+  }, [router])
 
   useEffect(() => {
     width && width > 1023 && setShowMenu(false)
@@ -25,53 +33,65 @@ export default function Header() {
       {showMenu && (
         <div className="visible grid w-full grid-cols-2 items-center justify-center space-y-5 py-5 lg:invisible lg:hidden">
           <TransparentButton
-            onClick={() => {
-              scrollTo('')
-              setShowMenu(false)
+            onClick={async () => {
+              homePage
+                ? (scrollTo(''), setShowMenu(false))
+                : (await router.push('/'), scrollTo(''), setShowMenu(false))
             }}
             title="Home"
-            classplus={undefined}
           />
           <TransparentButton
-            onClick={() => {
-              scrollTo('about')
-              setShowMenu(false)
+            onClick={async () => {
+              homePage
+                ? (scrollTo('about'), setShowMenu(false))
+                : (await router.push('/'), scrollTo('about'), setShowMenu(false))
             }}
             title="Sobre"
-            classplus={undefined}
           />
           <TransparentButton
-            onClick={() => {
-              scrollTo('services')
-              setShowMenu(false)
+            onClick={async () => {
+              homePage
+                ? (scrollTo('services'), setShowMenu(false))
+                : (await router.push('/'), scrollTo('services'), setShowMenu(false))
             }}
             title="Serviços"
-            classplus={undefined}
           />
           <TransparentButton
-            onClick={() => {
-              scrollTo('contact')
-              setShowMenu(false)
+            onClick={async () => {
+              homePage
+                ? (scrollTo('contact'), setShowMenu(false))
+                : (await router.push('/'), scrollTo('contact'), setShowMenu(false))
             }}
             title="Fale Conosco"
-            classplus={undefined}
           />
         </div>
       )}
 
       <div className="invisible hidden w-full items-center justify-center space-x-[12%] px-[10%] lg:visible lg:flex">
         <Logo className="w-[114px] fill-slate-light-1" />
-        <TransparentButton onClick={() => scrollTo('')} title="Home" classplus={undefined} />
-        <TransparentButton onClick={() => scrollTo('about')} title="Sobre" classplus={undefined} />
         <TransparentButton
-          onClick={() => scrollTo('services')}
-          title="Serviços"
-          classplus={undefined}
+          onClick={async () => {
+            homePage ? scrollTo('') : (await router.push('/'), scrollTo(''))
+          }}
+          title="Home"
         />
         <TransparentButton
-          onClick={() => scrollTo('contact')}
+          onClick={async () => {
+            homePage ? scrollTo('about') : (await router.push('/'), scrollTo('about'))
+          }}
+          title="Sobre"
+        />
+        <TransparentButton
+          onClick={async () => {
+            homePage ? scrollTo('services') : (await router.push('/'), scrollTo('services'))
+          }}
+          title="Serviços"
+        />
+        <TransparentButton
+          onClick={async () => {
+            homePage ? scrollTo('contact') : (await router.push('/'), scrollTo('contact'))
+          }}
           title="Fale Conosco"
-          classplus={undefined}
         />
       </div>
     </div>

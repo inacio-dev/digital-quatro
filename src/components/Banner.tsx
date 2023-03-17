@@ -110,16 +110,10 @@ export default function Banner({
             <YellowButton
               onClick={() => scrollTo('contact')}
               title="FALE CONOSCO"
-              titlehover={undefined}
               iconhover={<Phone className="w-8 fill-slate-light-1" />}
-              classplus={undefined}
               backgroundhover="bg-slate-dark-1"
             />
-            <TransparentButton
-              onClick={() => scrollTo('services')}
-              title="SAIBA MAIS"
-              classplus={undefined}
-            />
+            <TransparentButton onClick={() => scrollTo('services')} title="SAIBA MAIS" />
           </div>
         </div>
       </div>
